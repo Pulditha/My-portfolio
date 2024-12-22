@@ -1,0 +1,68 @@
+
+  
+  /* Technology cards styling */
+  .tech-card {
+    position: relative;
+    padding: 10px;
+    background-color: var(--customBlue); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .tech-card span {
+    position: relative;
+    z-index: 10;
+  }
+  
+  .tech-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: white;
+    opacity: 0.15;
+    border-radius: 8px;
+    z-index: 0;
+  }
+
+  
+#home {
+    background-image: url('img/hero.png'); /* Replace with your hero section background image */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    
+}
+
+#about {
+    background-image: url('img/About.png'); /* Replace with your about section background image */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+/* Ensure sections have enough height to see the parallax effect */
+#home, #about {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Optional styling for content */
+#home .content, #about .content {
+    z-index: 1;
+    position: relative;
+    color: white;
+}
+
+
+
+
+/* mobile responisve */
