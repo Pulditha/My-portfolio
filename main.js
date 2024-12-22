@@ -11,8 +11,9 @@ document.addEventListener('scroll', () => {
 });
 
 
-function toggleMenu() {
-    const nav = document.querySelector('header nav');
-    nav.classList.toggle('hidden');
-  }
-  
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('active');
+});

@@ -25,9 +25,19 @@
           </nav>
         </header>
       
+        <!-- Hamburger -->
+<button id="hamburger" class="md:hidden absolute top-4 right-4 z-50">
+  <i class="fa-solid fa-bars text-4xl text-white"></i>
+</button>
+<div id="mobile-menu" class="hidden fixed top-0 right-0 w-full h-screen bg-black text-white flex flex-col items-center justify-center space-y-8">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</div>
         <!-- Name in Top-Right Corner -->
         <div class="text-lg font-Pacifico p-2 fixed top-2 left-1 text-white">Pulditha Wathsal</div>
-        
+  
 
       </section>
       
@@ -75,15 +85,86 @@
       </section>
       
       <section id="about" class="py-20 bg-black text-white h-screen flex items-center">
-   
+        <div class="container mx-auto flex flex-col md:flex-row items-center md:space-x-10">
+
+          <div class="md:w-1/2 flex justify-center">
+            <div class="w-80 h-80 max-w-sm rounded-full overflow-hidden shadow-lg">
+              <img src="img/pulditha.png" alt="Your Picture" class="w-full h-full object-cover">
+            </div>
+          </div>
+        
+          <div class="md:w-5/6 text-center md:text-left">
+            <h2 class="text-6xl font-Anton mb-6">About Me</h2>
+            <p class="text-lg text-gray-300 leading-relaxed mb-6 mr-6">
+              Hey there! 👋 I'm a passionate software engineering student. Armed with my trusty toolkit of HTML, CSS, JavaScript, PHP, Laravel, React, and Angular, I love transforming blank screens into beautiful, user-friendly masterpieces.
+              I'm an aspiring full-stack developer and web designer.
+            </p>
+        
+            <div class="skill">
+              <h1 class="text-3xl font-Anton mb-8 mt-20">My Skills</h1>
+        
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+                <div class="text-center">
+                  <h3 class="text-lg font-semibold mb-2">HTML</h3>
+                  <div class="relative w-32 h-2 bg-gray-700 rounded">
+                    <div class="absolute top-0 left-0 h-2 bg-orange-500 rounded" style="width: 85%;"></div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h3 class="text-lg font-semibold mb-2">CSS</h3>
+                  <div class="relative w-32 h-2 bg-gray-700 rounded">
+                    <div class="absolute top-0 left-0 h-2 bg-orange-500 rounded" style="width: 80%;"></div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h3 class="text-lg font-semibold mb-2">JavaScript</h3>
+                  <div class="relative w-32 h-2 bg-gray-700 rounded">
+                    <div class="absolute top-0 left-0 h-2 bg-orange-500 rounded" style="width: 75%;"></div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h3 class="text-lg font-semibold mb-2">PHP</h3>
+                  <div class="relative w-32 h-2 bg-gray-700 rounded">
+                    <div class="absolute top-0 left-0 h-2 bg-orange-500 rounded" style="width: 60%;"></div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h3 class="text-lg font-semibold mb-2">Python</h3>
+                  <div class="relative w-32 h-2 bg-gray-700 rounded">
+                    <div class="absolute top-0 left-0 h-2 bg-orange-500 rounded" style="width: 40%;"></div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h3 class="text-lg font-semibold mb-2">C#</h3>
+                  <div class="relative w-32 h-2 bg-gray-700 rounded">
+                    <div class="absolute top-0 left-0 h-2 bg-orange-500 rounded" style="width: 40%;"></div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h3 class="text-lg font-semibold mb-2">React</h3>
+                  <div class="relative w-32 h-2 bg-gray-700 rounded">
+                    <div class="absolute top-0 left-0 h-2 bg-orange-500 rounded" style="width: 20%;"></div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h3 class="text-lg font-semibold mb-2">Angular</h3>
+                  <div class="relative w-32 h-2 bg-gray-700 rounded">
+                    <div class="absolute top-0 left-0 h-2 bg-orange-500 rounded" style="width: 10%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
 <!-- Contact Section -->
-<section id="contact" class="py-20 bg-gradient-to-b from-customDarkyellow to-customLightyellow text-white relative h-screen">
+<section id="contact" 
+  class="py-20 bg-gradient-to-b from-customDarkyellow to-customLightyellow text-white h-screen flex items-center overflow-hidden">
   <div class="container mx-auto">
     <h2 class="text-6xl font-Anton mb-6 text-center">Contact Me</h2>
 
-    <form class="grid grid-cols-1 gap-4 max-w-lg mx-auto  ">
+    <form class="grid grid-cols-1 gap-4 max-w-lg mx-auto">
       <!-- Name -->
       <div>
         <label class="block text-xl mb-2">Name *</label>
@@ -117,25 +198,28 @@
       <div>
         <button 
           type="submit" 
-          class="w-full bg-white text-black px-6 py-3  text-xl "
+          class="w-full bg-white text-black px-6 py-3 text-xl"
         >
           Send
         </button>
       </div>
     </form>
     
-    
-    <div class="absolute bottom-0 left-0 right-0 flex justify-between items-end px-6 py-8 ">
-      <div class="text-left">
-        <h2 class="text-9xl font-Anton text-white">Get in touch</h2>
+    <div class="flex flex-col md:flex-row justify-between items-center mt-12">
+      <div class="text-center md:text-left">
+        <h2 class="text-4xl md:text-6xl font-Anton text-white">Get in touch</h2>
       </div>
-      <div class="text-left ">
-        <p class=" text-4xl text-white font-semibold">Prefer email? Sounds good.</p>
-        <p class="text-4xl text-white font-semibold">I’m over at <a href="mailto:hi@yokyoto.ie" class="text-black hover:underline">Puldithaw@gmail.com</a>.</p>
+      <div class="text-center md:text-left mt-4 md:mt-0">
+        <p class="text-xl md:text-2xl text-white font-semibold">Prefer email? Sounds good.</p>
+        <p class="text-xl md:text-2xl text-white font-semibold">
+          I’m over at 
+          <a href="mailto:puldithaw@gmail.com" class="text-black hover:underline">Puldithaw@gmail.com</a>.
+        </p>
       </div>
     </div>
   </div>
 </section>
+
 
 
       

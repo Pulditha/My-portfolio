@@ -30,39 +30,66 @@
 
   
 #home {
-    background-image: url('img/hero.png'); /* Replace with your hero section background image */
+    background-image: url('img/hero.png'); 
     background-attachment: fixed;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
-    min-height: 100vh;
-    
-}
-
-#about {
-    background-image: url('img/About.png'); /* Replace with your about section background image */
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-}
-
-/* Ensure sections have enough height to see the parallax effect */
-#home, #about {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    background-repeat: no-repeat;
+    
+    
+    
 }
 
+
 /* Optional styling for content */
-#home .content, #about .content {
+#home .content {
     z-index: 1;
     position: relative;
     color: white;
 }
 
 
-
+@media (max-width: 900px) {
+  #home {
+    min-height: 30vh; /* Adjust the section height on smaller screens */
+  }
+}
+@media (max-width: 650px) {
+  #home {
+   
+    height: 500px; /* Adjust the section height on smaller screens */
+  }
+}
 
 /* mobile responisve */
+/* Navbar for smaller screens */
+@media (max-width: 1200px) {
+  header {
+    display: none;
+  }
+  #hamburger {
+    display: block;
+  }
+  #mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  #mobile-menu.active {
+    display: flex;
+  }
+  
+/* Hide navbar below 1200px */
+@media (max-width: 1200px) {
+  header {
+    display: none !important; /* Ensure it overrides other styles */
+  }
+}
+}
