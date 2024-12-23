@@ -7,7 +7,7 @@ html {
   .tech-card {
     position: relative;
     padding: 10px;
-    background-color: var(--customBlue); 
+    
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     text-align: center;
@@ -70,7 +70,7 @@ html {
      
   }
   .aboutpara{
-    font-size: small;
+    font-size: large;
   }
 }
 
@@ -179,5 +179,6 @@ html {
 #about {
   background-color: black; /* Ensure visibility of "About Me" */
 }
+
 
 
