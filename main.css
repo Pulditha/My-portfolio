@@ -1,4 +1,7 @@
-
+/* Add transitions if desired */
+html {
+  scroll-behavior: smooth; /* Smooth scrolling for links */
+}
   
   /* Technology cards styling */
   .tech-card {
@@ -15,7 +18,7 @@
   
   .tech-card span {
     position: relative;
-    z-index: 10;
+   
   }
   
   .tech-card::before {
@@ -30,7 +33,7 @@
 
   
 #home {
-    background-image: url('img/hero.png'); 
+    background-image: url('img/Hero.png'); 
     background-attachment: fixed;
     background-size: contain;
     background-position: center;
@@ -56,40 +59,125 @@
 
 @media (max-width: 900px) {
   #home {
-    min-height: 30vh; /* Adjust the section height on smaller screens */
+    min-height: 30vh;
   }
 }
 @media (max-width: 650px) {
   #home {
-   
-    height: 500px; /* Adjust the section height on smaller screens */
+    height: 350px;
+     /* Make the image larger */
+     background-position: center top 10%; /* Move the image upwards */ /* Adjust the section height on smaller screens */
+     
+  }
+  .aboutpara{
+    font-size: small;
   }
 }
 
 /* mobile responisve */
 /* Navbar for smaller screens */
-@media (max-width: 1200px) {
-  header {
-    display: none;
-  }
-  #hamburger {
-    display: block;
-  }
+
   #mobile-menu {
     display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-  }
-  #mobile-menu.active {
-    display: flex;
+    position: fixed;
+    top: 4rem; /* Adjusted to appear below the hamburger button */
+    right: 1rem;
+    width: 200px;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
   }
   
+  /* Active state for the mobile menu */
+  #mobile-menu.active {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Animation for smooth menu appearance */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Hamburger icon styles */
+  #hamburger {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10000;
+  }
+  
+  #hamburger i {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+ 
+  .fa-bars-staggered {
+    transform: scale(1.1);
+  }
+
 /* Hide navbar below 1200px */
 @media (max-width: 1200px) {
   header {
-    display: none !important; /* Ensure it overrides other styles */
+    display: none !important; 
   }
 }
+@media (max-width: 1200px) {
+  #hamburger {
+    display: block;
+  }
+
+  #mobile-menu {
+    display: none;
+  }
+
+  /* Make the menu appear below the hamburger when toggled */
+  #mobile-menu.active {
+    display: flex;
+  }
 }
+
+
+/* Make the "About Me" section fixed */
+#about {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  z-index: -1; /* Ensure it's above other sections */
+}
+
+/* Adjust other sections to scroll past */
+#home,
+#projects,
+#contact {
+
+  z-index: 1;
+   /* Leave space for the fixed "About Me" section */
+
+  }
+
+
+#contact{
+  margin-top: 100vh;
+}
+
+/* Ensure the background color of each section works well */
+#about {
+  background-color: black; /* Ensure visibility of "About Me" */
+}
+
+

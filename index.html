@@ -8,69 +8,80 @@
     <link rel="stylesheet" href="main.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
-
     <body class="bg-gray-100 text-gray-800">
       <!-- Hero Section -->
       <section id="home" class="h-screen flex items-center justify-center bg-black relative">
         <!-- Navbar -->
-        <header class="text-3xl  text-white font-Anton absolute top-0 right-0 h-full w-60 flex flex-col justify-center items-center space-y-4">
-          
+        <header
+          class="text-3xl text-white font-Anton absolute top-0 right-0 h-full w-60 flex flex-col justify-center items-center space-y-4">
           <nav>
             <ul class="space-y-4">
-              <li><a href="#home" class="hover:text-customOrange transform -rotate-90 "><i class="fa-solid fa-circle-chevron-right"></i>  Home</a></li>
-              <li><a href="#about" class="hover:text-customOrange transform -rotate-90"><i class="fa-solid fa-circle-chevron-right"></i>  About</a></li>
-              <li><a href="#projects" class="hover:text-customOrange transform -rotate-90"><i class="fa-solid fa-circle-chevron-right"></i>  Projects</a></li>
-              <li><a href="#contact" class="hover:text-customOrange transform -rotate-90"><i class="fa-solid fa-circle-chevron-right"></i>  Contact</a></li>
+              <li><a href="#home" class="hover:text-customOrange transform -rotate-90"><i
+                    class="fa-solid fa-circle-chevron-right"></i> Home</a></li>
+              <li><a href="aboutme.html" class="hover:text-customOrange transform -rotate-90"><i
+                    class="fa-solid fa-circle-chevron-right"></i> About</a></li>
+              <li><a href="projects.html" class="hover:text-customOrange transform -rotate-90"><i
+                    class="fa-solid fa-circle-chevron-right"></i> Projects</a></li>
+              <li><a href="#contact" class="hover:text-customOrange transform -rotate-90"><i
+                    class="fa-solid fa-circle-chevron-right"></i> Contact</a></li>
             </ul>
           </nav>
         </header>
       
         <!-- Hamburger -->
-<button id="hamburger" class="md:hidden absolute top-4 right-4 z-50">
-  <i class="fa-solid fa-bars text-4xl text-white"></i>
-</button>
-<div id="mobile-menu" class="hidden fixed top-0 right-0 w-full h-screen bg-black text-white flex flex-col items-center justify-center space-y-8">
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-</div>
+        <button id="hamburger" class="md:hidden top-4 right-4 z-50 fixed">
+          <i class="fa-solid fa-bars text-xl text-white"></i>
+        </button>
+        
+        <div id="mobile-menu"
+          class="font-Anton hidden fixed top-4 right-4 bg-black text-white p-6 rounded-lg shadow-lg z-50 flex flex-col space-y-4">   
+          <a href="index.html" class="block hover:text-customOrange "><i
+            class="fa-solid fa-circle-chevron-right"></i> Home</a>
+          <a href="aboutme.html" class="block hover:text-customOrange"><i
+            class="fa-solid fa-circle-chevron-right"></i> About</a>
+          <a href="projects.html" class="block hover:text-customOrange"><i
+            class="fa-solid fa-circle-chevron-right"></i> Projects</a>
+          <a href="#contact" class="block hover:text-customOrange"><i
+            class="fa-solid fa-circle-chevron-right"></i> Contact</a>
+               </div>
+      </div>
+      
         <!-- Name in Top-Right Corner -->
-        <div class="text-lg font-Pacifico p-2 fixed top-2 left-1 text-white">Pulditha Wathsal</div>
-  
-
+        <div class="text-lg font-Pacifico p-2 fixed top-2 left-1 text-white z-50">Pulditha Wathsal</div>
       </section>
       
-      <section id="projects" class="py-20 bg-gradient-to-b from-customDarkblue to-customBlue h-screen">
+      
+      
+      <section id="projects" class="py-20 bg-gradient-to-b from-customDarkblue to-customBlue h-auto">
         <div class="container mx-auto">
           <!-- Header -->
-          <div class="text-left ml-20 md:ml-40">
-            <h1 class="text-6xl font-Anton mb-8 text-white">My Latest Project</h1>
+          <div class="text-left ml-5 md:ml-20 lg:ml-40">
+            <h1 class="text-4xl md:text-6xl font-Anton mb-8 text-white lg:text-left text-center">My Latest Project</h1>
           </div>
       
           <!-- Project Details with Image -->
-          <div class="flex flex-col md:flex-row items-start ml-20 md:ml-40 space-y-6 md:space-y-0 md:space-x-6 py-10">
-            <!-- Left Column: Image -->
-            <div class="flex-grow relative overflow-hidden" style="flex: 2;">
+          <div class="flex flex-col items-center md:flex-row md:items-start md:ml-20 lg:ml-40 md:space-x-6 py-10">
+            <!-- Image -->
+            <div class="relative overflow-hidden w-full md:w-1/2 lg:flex-grow">
               <div class="parallax-container">
                 <img src="img/bars.png" 
-                     alt="Screenshot of the Latest Website" 
+                     alt="latest-project" 
                      class="parallax-image w-full h-auto object-cover shadow-lg">
               </div>
             </div>  
       
-            <!-- Right Column: Text and Technologies -->
-            <div class="flex-1 flex flex-col justify-between">
+            <!-- Text and Technologies -->
+            <div class="flex flex-col justify-between w-full md:w-1/2">
               <!-- Project Description -->
-              <div>
-                <h2 class="text-3xl font-Anton text-white">BARS E-COMMERCE</h2>
-                <p class="text-lg text-white mt-4 mr-5">
+              <div class="text-center md:text-left mt-8 md:mt-0">
+                <h2 class="text-2xl md:text-3xl font-Anton text-white">BARS E-COMMERCE</h2>
+                <p class="text-lg text-white mt-4 mr-0 md:mr-5">
                   A brief introduction to your project goes here. Describe the purpose, features, or objectives of the project in a few lines.
                 </p>
               </div>
       
               <!-- Technologies Section -->
-              <div class="grid grid-cols-3 gap-2 mt-8 mr-6">
+              <div class="grid grid-cols-3 gap-2 mt-8">
                 <!-- Technology Cards -->
                 <div class="tech-card"><span><i class="fa-brands fa-html5"></i> HTML</span></div>
                 <div class="tech-card"><span><i class="fa-brands fa-css3-alt"></i> CSS Tailwind</span></div>
@@ -85,89 +96,39 @@
       </section>
       
       <section id="about" class="py-20 bg-black text-white h-screen flex items-center">
-        <div class="container mx-auto flex flex-col md:flex-row items-center md:space-x-10">
-
-          <div class="md:w-1/2 flex justify-center">
-            <div class="w-80 h-80 max-w-sm rounded-full overflow-hidden shadow-lg">
-              <img src="img/pulditha.png" alt="Your Picture" class="w-full h-full object-cover">
+        <div class="container mx-auto flex flex-col md:flex-row items-center md:space-x-10 relative">
+      
+          <!-- Image Section -->
+          <div class="md:w-1/2 flex justify-center mb-8 md:mb-0">
+            <div class="w-64 h-64 max-w-sm rounded-full overflow-hidden shadow-lg md:h-64 md:w-64 lg:h-80 lg:w-80">
+              <img src="img/pulditha.png" alt="dp" class="w-full h-full object-cover">
             </div>
           </div>
-        
+      
+          <!-- Text and Button Section -->
           <div class="md:w-5/6 text-center md:text-left">
-            <h2 class="text-6xl font-Anton mb-6">About Me</h2>
-            <p class="text-lg text-gray-300 leading-relaxed mb-6 mr-6">
-              Hey there! 👋 I'm a passionate software engineering student. Armed with my trusty toolkit of HTML, CSS, JavaScript, PHP, Laravel, React, and Angular, I love transforming blank screens into beautiful, user-friendly masterpieces.
-              I'm an aspiring full-stack developer and web designer.
+            <h2 class="text-4xl md:text-6xl font-Anton mb-6">About Me</h2>
+            <p class="text-lg text-gray-300 leading-relaxed mb-6 aboutpara">
+              Hey there! 👋 I'm a passionate software engineering student. Armed with my trusty toolkit of HTML, CSS, JavaScript, PHP, Laravel, React, and Angular, I love transforming blank screens into beautiful, user-friendly masterpieces. I'm an aspiring full-stack developer and web designer.
             </p>
-        
-            <div class="skill">
-              <h1 class="text-3xl font-Anton mb-8 mt-20">My Skills</h1>
-        
-              <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
-                <div class="text-center">
-                  <h3 class="text-lg font-semibold mb-2">HTML</h3>
-                  <div class="relative w-32 h-2 bg-gray-700 rounded">
-                    <div class="absolute top-0 left-0 h-2 bg-orange-500 rounded" style="width: 85%;"></div>
-                  </div>
-                </div>
-                <div class="text-center">
-                  <h3 class="text-lg font-semibold mb-2">CSS</h3>
-                  <div class="relative w-32 h-2 bg-gray-700 rounded">
-                    <div class="absolute top-0 left-0 h-2 bg-orange-500 rounded" style="width: 80%;"></div>
-                  </div>
-                </div>
-                <div class="text-center">
-                  <h3 class="text-lg font-semibold mb-2">JavaScript</h3>
-                  <div class="relative w-32 h-2 bg-gray-700 rounded">
-                    <div class="absolute top-0 left-0 h-2 bg-orange-500 rounded" style="width: 75%;"></div>
-                  </div>
-                </div>
-                <div class="text-center">
-                  <h3 class="text-lg font-semibold mb-2">PHP</h3>
-                  <div class="relative w-32 h-2 bg-gray-700 rounded">
-                    <div class="absolute top-0 left-0 h-2 bg-orange-500 rounded" style="width: 60%;"></div>
-                  </div>
-                </div>
-                <div class="text-center">
-                  <h3 class="text-lg font-semibold mb-2">Python</h3>
-                  <div class="relative w-32 h-2 bg-gray-700 rounded">
-                    <div class="absolute top-0 left-0 h-2 bg-orange-500 rounded" style="width: 40%;"></div>
-                  </div>
-                </div>
-                <div class="text-center">
-                  <h3 class="text-lg font-semibold mb-2">C#</h3>
-                  <div class="relative w-32 h-2 bg-gray-700 rounded">
-                    <div class="absolute top-0 left-0 h-2 bg-orange-500 rounded" style="width: 40%;"></div>
-                  </div>
-                </div>
-                <div class="text-center">
-                  <h3 class="text-lg font-semibold mb-2">React</h3>
-                  <div class="relative w-32 h-2 bg-gray-700 rounded">
-                    <div class="absolute top-0 left-0 h-2 bg-orange-500 rounded" style="width: 20%;"></div>
-                  </div>
-                </div>
-                <div class="text-center">
-                  <h3 class="text-lg font-semibold mb-2">Angular</h3>
-                  <div class="relative w-32 h-2 bg-gray-700 rounded">
-                    <div class="absolute top-0 left-0 h-2 bg-orange-500 rounded" style="width: 10%;"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      
+         
           </div>
         </div>
       </section>
+      
 
 <!-- Contact Section -->
 <section id="contact" 
   class="py-20 bg-gradient-to-b from-customDarkyellow to-customLightyellow text-white h-screen flex items-center overflow-hidden">
-  <div class="container mx-auto">
-    <h2 class="text-6xl font-Anton mb-6 text-center">Contact Me</h2>
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl md:text-6xl font-Anton mt-6 mb-6 text-center">Contact Me</h2>
 
+    <!-- Contact Form -->
     <form class="grid grid-cols-1 gap-4 max-w-lg mx-auto">
       <!-- Name -->
       <div>
-        <label class="block text-xl mb-2">Name *</label>
+        <label class="block text-lg md:text-xl mb-2">Name *</label>
         <input 
           type="text" 
           placeholder="Your Name" 
@@ -177,7 +138,7 @@
       
       <!-- Email -->
       <div>
-        <label class="block text-xl mb-2">Email *</label>
+        <label class="block text-lg md:text-xl mb-2">Email *</label>
         <input 
           type="email" 
           placeholder="Your Email" 
@@ -187,7 +148,7 @@
     
       <!-- Message -->
       <div>
-        <label class="block text-xl mb-2">Your Message</label>
+        <label class="block text-lg md:text-xl mb-2">Your Message</label>
         <textarea 
           placeholder="What's up" 
           class="w-full p-3 bg-black text-white border-b border-gray-500 focus:outline-none focus:border-customorange"
@@ -198,20 +159,32 @@
       <div>
         <button 
           type="submit" 
-          class="w-full bg-white text-black px-6 py-3 text-xl"
+          class="w-full bg-white text-black px-6 py-3 text-lg md:text-xl rounded hover:bg-customorange transition-all duration-300"
         >
           Send
         </button>
       </div>
     </form>
     
-    <div class="flex flex-col md:flex-row justify-between items-center mt-12">
+    <!-- Get in Touch Section -->
+    <div class="flex flex-col md:flex-row justify-between items-center mt-12 space-y-6 md:space-y-0 md:space-x-12">
+      <!-- Social Links -->
       <div class="text-center md:text-left">
-        <h2 class="text-4xl md:text-6xl font-Anton text-white">Get in touch</h2>
+        <h2 class="text-3xl md:text-4xl font-Anton text-white mb-4">Get in Touch</h2>
+        <div class="flex justify-center md:justify-start space-x-6">
+          <a href="https://www.linkedin.com/in/pulditha-wathsal/" class="text-4xl md:text-5xl text-white hover:text-black transition-all duration-300">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/" class="text-4xl md:text-5xl text-white hover:text-black transition-all duration-300">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
       </div>
-      <div class="text-center md:text-left mt-4 md:mt-0">
-        <p class="text-xl md:text-2xl text-white font-semibold">Prefer email? Sounds good.</p>
-        <p class="text-xl md:text-2xl text-white font-semibold">
+
+      <!-- Email Section -->
+      <div class="text-center md:text-left">
+        <p class="text-lg md:text-xl text-white font-semibold">Prefer email? Sounds good.</p>
+        <p class="text-lg md:text-xl text-white font-semibold">
           I’m over at 
           <a href="mailto:puldithaw@gmail.com" class="text-black hover:underline">Puldithaw@gmail.com</a>.
         </p>
@@ -219,7 +192,6 @@
     </div>
   </div>
 </section>
-
 
 
       
