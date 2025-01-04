@@ -7,62 +7,156 @@
     <link href="./dist/styles.css" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
-    <body class="bg-gray-100 text-gray-800">
-      <!-- Hero Section -->
-      <section id="aboutme" class="h-screen flex items-center justify-center bg-black relative">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Hero Section -->
+    <section id="aboutme" class="min-h-screen flex flex-col items-center bg-black text-white relative">
         <!-- Navbar -->
         <header
-          class="text-3xl text-white font-Anton absolute top-0 right-0 h-full w-60 flex flex-col justify-center items-center space-y-4">
-          <nav>
-            <ul class="space-y-4">
-              <li><a href="index.html" class="hover:text-customOrange transform -rotate-90"><i
-                    class="fa-solid fa-circle-chevron-right"></i> Home</a></li>
-              <li><a href="aboutme.html" class="hover:text-customOrange transform -rotate-90"><i
-                    class="fa-solid fa-circle-chevron-right"></i> About</a></li>
-              <li><a href="projects.html" class="hover:text-customOrange transform -rotate-90"><i
-                    class="fa-solid fa-circle-chevron-right"></i> Projects</a></li>
-              <li><a href="index.html#contacts" class="hover:text-customOrange transform -rotate-90"><i
-                    class="fa-solid fa-circle-chevron-right"></i> Contact</a></li>
-            </ul>
-          </nav>
+            class="text-3xl font-Anton absolute top-0 right-0 h-full w-60 flex flex-col justify-center items-center space-y-4">
+            <nav>
+                <ul class="space-y-4">
+                    <li><a href="index.html" class="hover:text-customOrange transform -rotate-90"><i
+                            class="fa-solid fa-circle-chevron-right"></i> Home</a></li>
+                    <li><a href="aboutme.html" class="hover:text-customOrange transform -rotate-90"><i
+                            class="fa-solid fa-circle-chevron-right"></i> About</a></li>
+                    <li><a href="projects.html" class="hover:text-customOrange transform -rotate-90"><i
+                            class="fa-solid fa-circle-chevron-right"></i> Projects</a></li>
+                    <li><a href="index.html#contacts" class="hover:text-customOrange transform -rotate-90"><i
+                            class="fa-solid fa-circle-chevron-right"></i> Contact</a></li>
+                </ul>
+            </nav>
         </header>
-      
+
         <!-- Hamburger -->
         <button id="hamburger" class="md:hidden top-4 right-4 z-50 fixed">
-          <i class="fa-solid fa-bars text-3xl text-white"></i>
+            <i class="fa-solid fa-bars text-3xl text-white"></i>
         </button>
         
         <div id="mobile-menu"
-          class="font-Anton hidden fixed top-4 right-4 bg-black text-white p-6 rounded-lg shadow-lg z-50 flex flex-col space-y-4">   
-          <a href="index.html" class="block hover:text-customOrange "><i
-            class="fa-solid fa-circle-chevron-right"></i> Home</a>
-          <a href="aboutme.html" class="block hover:text-customOrange"><i
-            class="fa-solid fa-circle-chevron-right"></i> About</a>
-          <a href="projects.html" class="block hover:text-customOrange"><i
-            class="fa-solid fa-circle-chevron-right"></i> Projects</a>
-          <a href="index.html" class="block hover:text-customOrange"><i
-            class="fa-solid fa-circle-chevron-right"></i> Contact</a>
-               </div>
-      </div>
-
-      
-      <div>
-        <div class="text-3xl  text-customOrange font-Anton mb-0 leading-none">
-            This page is currently powered by hope and caffeine. Please check again soon! ☕
+            class="font-Anton hidden fixed top-4 right-4 bg-black text-white p-6 rounded-lg shadow-lg z-50 flex flex-col space-y-4">   
+            <a href="index.html" class="block hover:text-customOrange "><i
+              class="fa-solid fa-circle-chevron-right"></i> Home</a>
+            <a href="aboutme.html" class="block hover:text-customOrange"><i
+              class="fa-solid fa-circle-chevron-right"></i> About</a>
+            <a href="projects.html" class="block hover:text-customOrange"><i
+              class="fa-solid fa-circle-chevron-right"></i> Projects</a>
+            <a href="index.html" class="block hover:text-customOrange"><i
+              class="fa-solid fa-circle-chevron-right"></i> Contact</a>
         </div>
-       
-      </div>
-    </div>
-  </div>
-      
+
+        <!-- Skills Section -->
+        <div class="container mx-auto p-6 min-h-screen flex flex-col justify-center">
+            <h2 class="text-3xl font-bold text-customOrange mb-6 text-center">My Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 justify-items-center">
+                <!-- Skill Bars -->
+                <div class="skill">
+                    <canvas id="htmlSkill" width="80" height="80"></canvas>
+                    <p class="text-center mt-2 text-sm">HTML - 85%</p>
+                </div>
+                <div class="skill">
+                    <canvas id="cssSkill" width="80" height="80"></canvas>
+                    <p class="text-center mt-2 text-sm">CSS - 80%</p>
+                </div>
+                <div class="skill">
+                    <canvas id="jsSkill" width="80" height="80"></canvas>
+                    <p class="text-center mt-2 text-sm">JavaScript - 70%</p>
+                </div>
+                <div class="skill">
+                    <canvas id="pythonSkill" width="80" height="80"></canvas>
+                    <p class="text-center mt-2 text-sm">Python - 40%</p>
+                </div>
+                <div class="skill">
+                    <canvas id="phpSkill" width="80" height="80"></canvas>
+                    <p class="text-center mt-2 text-sm">PHP - 40%</p>
+                </div>
+                <div class="skill">
+                    <canvas id="reactSkill" width="80" height="80"></canvas>
+                    <p class="text-center mt-2 text-sm">React - 60%</p>
+                </div>
+                <div class="skill">
+                    <canvas id="nodeSkill" width="80" height="80"></canvas>
+                    <p class="text-center mt-2 text-sm">Node.js - 50%</p>
+                </div>
+                <div class="skill">
+                    <canvas id="sqlSkill" width="80" height="80"></canvas>
+                    <p class="text-center mt-2 text-sm">SQL - 65%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Me Content -->
+        <div class="container mx-auto p-6 flex flex-col md:flex-row items-center">
+            <!-- Image Section -->
+            <div class="w-full md:w-1/3">
+                <img src="./your-image.jpg" alt="Pulditha Wathsal" class="rounded-full shadow-lg mx-auto">
+            </div>
+
+            <!-- Description Section -->
+            <div class="w-full md:w-2/3 text-center md:text-left">
+                <h1 class="text-4xl font-bold text-customOrange mb-4">About Me</h1>
+                <p class="text-lg leading-relaxed mb-6">
+                    Hi, I'm Pulditha Wathsal, a passionate developer fueled by hope and caffeine. I specialize in web development, creating responsive and dynamic websites that bring ideas to life. When I'm not coding, I enjoy exploring new technologies and expanding my skills.
+                </p>
+                <p class="text-lg leading-relaxed">
+                    I believe in the power of collaboration and innovation. My journey as a developer has taught me the value of persistence and learning from challenges. Let's create something amazing together!
+                </p>
+            </div>
+        </div>
+
+        <!-- Education Tree Section -->
+        <div class="container mx-auto p-6">
+            <h2 class="text-3xl font-bold text-customOrange mb-6 text-center">Education</h2>
+            <div class="border-l-4 border-customOrange pl-4">
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold">Bachelor of Science in Computer Science</h3>
+                    <p class="text-sm text-gray-300">University of Example - 2018 to 2022</p>
+                </div>
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold">High School Diploma</h3>
+                    <p class="text-sm text-gray-300">Example High School - 2016 to 2018</p>
+                </div>
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold">Middle School Certificate</h3>
+                    <p class="text-sm text-gray-300">Example Middle School - 2014 to 2016</p>
+                </div>
+            </div>
+        </div>
+
         <!-- Name in Top-Right Corner -->
         <div class="text-lg font-Pacifico p-2 fixed top-2 left-1 text-white z-50">Pulditha Wathsal</div>
-      </section>
+    </section>
 
-      <script src="main.js"></script>
-    </body>
-</head>
+    <script>
+        function createSkillChart(canvasId, percentage) {
+            const ctx = document.getElementById(canvasId).getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    datasets: [{
+                        data: [percentage, 100 - percentage],
+                        backgroundColor: ['#FFA500', '#333333'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    cutout: '70%',
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+        }
+
+        createSkillChart('htmlSkill', 85);
+        createSkillChart('cssSkill', 80);
+        createSkillChart('jsSkill', 70);
+        createSkillChart('pythonSkill', 40);
+        createSkillChart('phpSkill', 40);
+        createSkillChart('reactSkill', 60);
+        createSkillChart('nodeSkill', 50);
+        createSkillChart('sqlSkill', 65);
+    </script>
+</body>
 </html>
-
-      
