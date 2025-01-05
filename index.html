@@ -9,194 +9,140 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <body class="bg-gray-100 text-gray-800">
-      <!-- Hero Section -->
-      <section id="home" class="h-screen flex items-center justify-center bg-black relative">
-        <!-- Navbar -->
-        <header
-          class="text-3xl text-white font-Anton absolute top-0 right-0 h-full w-60 flex flex-col justify-center items-center space-y-4">
-          <nav>
-            <ul class="space-y-4">
-              <li><a href="#home" class="hover:text-customOrange transform -rotate-90"><i
-                    class="fa-solid fa-circle-chevron-right"></i> Home</a></li>
-              <li><a href="aboutme.html" class="hover:text-customOrange transform -rotate-90"><i
-                    class="fa-solid fa-circle-chevron-right"></i> About</a></li>
-              <li><a href="projects.html" class="hover:text-customOrange transform -rotate-90"><i
-                    class="fa-solid fa-circle-chevron-right"></i> Projects</a></li>
-              <li><a href="#contact" class="hover:text-customOrange transform -rotate-90"><i
-                    class="fa-solid fa-circle-chevron-right"></i> Contact</a></li>
-            </ul>
-          </nav>
-        </header>
-      
-        <!-- Hamburger -->
-        <button id="hamburger" class="md:hidden top-4 right-4 z-50 fixed">
-          <i class="fa-solid fa-bars text-3xl text-white"></i>
-        </button>
-        
-        <div id="mobile-menu"
-          class="font-Anton hidden fixed top-4 right-4 bg-black text-white p-6 rounded-lg shadow-lg z-50 flex flex-col space-y-4">   
-          <a href="#home" class="block hover:text-customOrange "><i
-            class="fa-solid fa-circle-chevron-right"></i> Home</a>
-          <a href="aboutme.html" class="block hover:text-customOrange"><i
-            class="fa-solid fa-circle-chevron-right"></i> About</a>
-          <a href="projects.html" class="block hover:text-customOrange"><i
-            class="fa-solid fa-circle-chevron-right"></i> Projects</a>
-          <a href="#contact" class="block hover:text-customOrange"><i
-            class="fa-solid fa-circle-chevron-right"></i> Contact</a>
-               </div>
-      </div>
-      
-        <!-- Name in Top-Right Corner -->
-        <div class="text-lg font-Pacifico p-2 fixed top-2 left-1 text-white z-50">Pulditha Wathsal</div>
-      </section>
-      
-      
-      
-      <section id="projects" class="py-20 bg-gradient-to-b from-customDarkblue to-customBlue h-auto">
-        <div class="container mx-auto">
-          <!-- Header -->
-          <div class="text-left ml-5 md:ml-20 lg:ml-40">
-            <h1 class="text-4xl md:text-6xl font-Anton mb-8 text-white lg:text-left text-center">My Latest Project</h1>
-          </div>
-      
-          <!-- Project Details with Image -->
-          <div class="flex flex-col items-center md:flex-row md:items-start md:ml-20 lg:ml-40 md:space-x-6 py-10">
-            <!-- Image -->
-            <div class="relative overflow-hidden w-full md:w-1/2 lg:flex-grow">
-              <div class="parallax-container">
-                <img src="img/bars.webp" 
-                     alt="latest-project" 
-                     class="parallax-image w-full h-auto object-cover shadow-lg">
-              </div>
-            </div>  
-      
-            <!-- Text and Technologies -->
-            <div class="flex flex-col justify-between w-full md:w-1/2">
-              <!-- Project Description -->
-              <div class="text-center md:text-left mt-8 md:mt-0">
-                <h2 class="text-2xl md:text-3xl font-Anton text-white">BARS E-COMMERCE</h2>
-                <p class="text-lg text-white mt-4 mr-0 md:mr-5">
-                  Bars E-Commerce Platform is a modern online store designed for chocolate enthusiasts. It aims to provide a seamless and secure shopping experience with features like user authentication, session management, an intuitive admin dashboard, and dynamic product handling. Built with Laravel and styled using Tailwind CSS, the platform combines performance, functionality, and a visually appealing design to deliver a delightful user experience.                </p>
-              </div>
-      
-              <!-- Technologies Section -->
-              <div class="grid grid-cols-3 gap-2 mt-8">
-                <!-- Technology Cards -->
-                <div class="tech-card"><span><i class="fa-brands fa-html5"></i> HTML</span></div>
-                <div class="tech-card"><span><i class="fa-brands fa-css3-alt"></i> CSS Tailwind</span></div>
-                <div class="tech-card"><span><i class="fa-brands fa-js"></i> JavaScript</span></div>
-                <div class="tech-card"><span><i class="fa-brands fa-php"></i> PHP</span></div>
-                <div class="tech-card"><span><i class="fa-brands fa-laravel"></i> Laravel</span></div>
-                <div class="tech-card"><span><i class="fa-solid fa-database"></i> MySQL</span></div>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <section id="about" class="py-20 bg-black text-white h-screen flex items-center">
-        <div class="container mx-auto flex flex-col md:flex-row items-center md:space-x-10 relative">
-      
-          <!-- Image Section -->
-          <div class="md:w-1/2 flex justify-center mb-8 md:mb-0">
-            <div class="w-64 h-64 max-w-sm rounded-full overflow-hidden shadow-lg md:h-64 md:w-64 lg:h-80 lg:w-80 .card">
-              <img src="img/pulditha.webp" alt="dp" class="w-full h-full object-cover card">
-            </div>
-          </div>
-      
-          <!-- Text and Button Section -->
-          <div class="md:w-5/6 text-center md:text-left">
-            <h2 class="text-4xl md:text-6xl font-Anton mb-6">About Me</h2>
-            <p class="text-lg text-gray-300 leading-relaxed mb-6 aboutpara">
-              Hey there! 👋 I'm a passionate software engineering student. Armed with my trusty toolkit of HTML, CSS, JavaScript, PHP, Laravel, React, and Angular, I love transforming blank screens into beautiful, user-friendly masterpieces. I'm an aspiring full-stack developer and web designer.
-            </p>
-      
-         
-          </div>
-        </div>
-      </section>
-      
-
-<!-- Contact Section -->
-<section id="contact" 
-  class="py-20 bg-gradient-to-b from-customDarkyellow to-customLightyellow text-white h-screen flex items-center overflow-hidden">
-  <div class="container mx-auto px-4">
-    <h2 class="text-4xl md:text-6xl font-Anton mt-6 mb-6 text-center">Contact Me</h2>
-
-    <!-- Contact Form -->
-    <form class="grid grid-cols-1 gap-4 max-w-lg mx-auto">
-      <!-- Name -->
-      <div>
-        <label class="block text-lg md:text-xl mb-2">Name *</label>
-        <input 
-          type="text" 
-          placeholder="Your Name" 
-          class="w-full p-3 bg-black text-white border-b border-gray-500 focus:outline-none focus:border-customorange"
-        >
-      </div>
-      
-      <!-- Email -->
-      <div>
-        <label class="block text-lg md:text-xl mb-2">Email *</label>
-        <input 
-          type="email" 
-          placeholder="Your Email" 
-          class="w-full p-3 bg-black text-white border-b border-gray-500 focus:outline-none focus:border-customorange"
-        >
-      </div>
+         <!-- Hamburger Menu -->
+    <!-- Hamburger Menu Button -->
+    <div class="text-xl font-Pacifico p-2 fixed top-2 left-1 text-white z-50"><a href="#home">Pulditha Wathsal</a></div>
     
-      <!-- Message -->
-      <div>
-        <label class="block text-lg md:text-xl mb-2">Your Message</label>
-        <textarea 
-          placeholder="What's up" 
-          class="w-full p-3 bg-black text-white border-b border-gray-500 focus:outline-none focus:border-customorange"
-        ></textarea>
-      </div>
+    <div class="fixed top-4 right-4 z-50">
+      <button id="menuToggle" class="text-3xl text-white focus:outline-none">
+          <i id="menuIcon" class="fas fa-bars"></i>
+      </button>
+  </div>
 
-      <!-- Submit Button -->
-      <div>
-        <button 
-          type="submit" 
-          class="w-full bg-white text-black px-6 py-3 text-lg md:text-xl rounded hover:bg-customorange transition-all duration-300"
-        >
-          Send
-        </button>
+  <!-- Navigation Menu -->
+  <div id="navMenu" class="fixed top-0 right-0 h-screen w-2/3 bg-gray-600 text-white transform translate-x-full transition-transform duration-300">
+      <ul class="mt-20 space-y-6 text-center font-Anton">
+          <li><a href="#home" class="block py-2 text-xl hover:bg-gray-700"><i
+            class="fa-solid fa-circle-chevron-right"></i> Home</a></li>
+          <li><a href="#latest-project" class="block py-2 text-xl hover:bg-gray-700"><i
+            class="fa-solid fa-circle-chevron-right"></i> Latest Project</a></li>
+          <li><a href="#about" class="block py-2 text-xl hover:bg-gray-700"><i
+            class="fa-solid fa-circle-chevron-right"></i> About Me</a></li>
+          <li><a href="#projects" class="block py-2 text-xl hover:bg-gray-700"><i
+            class="fa-solid fa-circle-chevron-right"></i> Projects</a></li>
+          <li><a href="#skills" class="block py-2 text-xl hover:bg-gray-700"><i
+            class="fa-solid fa-circle-chevron-right"></i> Skills</a></li>
+          <li><a href="#contact" class="block py-2 text-xl hover:bg-gray-700"><i
+            class="fa-solid fa-circle-chevron-right"></i> Contact Me</a></li>
+      </ul>
+  </div>
+
+  <!-- Full-Screen Sections -->
+  <section id="home" class="h-screen flex items-center justify-center bg-black">
+      <h1 class="text-9xl font-Anton text-white text-wrapper">WEB DEVELOPER</h1>
+  </section>
+
+  <section id="latest-project" class="py-20 bg-gradient-to-b from-customDarkblue to-customBlue h-auto">
+    <div class="container mx-auto">
+      <!-- Header -->
+      <div class="text-left ml-5 md:ml-20 lg:ml-40">
+        <h1 class="text-4xl md:text-6xl font-Anton mb-8 text-white lg:text-left text-center">My Latest Project</h1>
       </div>
-    </form>
-    
-    <!-- Get in Touch Section -->
-    <div class="flex flex-col md:flex-row justify-between items-center mt-12 space-y-6 md:space-y-0 md:space-x-12">
-      <!-- Social Links -->
-      <div class="text-center md:text-left">
-        <h2 class="text-3xl md:text-4xl font-Anton text-white mb-4">Get in Touch</h2>
-        <div class="flex justify-center md:justify-start space-x-6">
-          <a href="https://www.linkedin.com/in/pulditha-wathsal/" class="text-4xl md:text-5xl text-white hover:text-black transition-all duration-300">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/" class="text-4xl md:text-5xl text-white hover:text-black transition-all duration-300">
-            <i class="fa-brands fa-github"></i>
-          </a>
+  
+      <!-- Project Details with Image -->
+      <div class="flex flex-col items-center md:flex-row md:items-start md:ml-20 lg:ml-40 md:space-x-6 py-10">
+        <!-- Image -->
+        <div class="relative overflow-hidden w-full md:w-1/2 lg:flex-grow">
+          <div class="parallax-container">
+            <img src="img/bars.webp" 
+                 alt="latest-project" 
+                 class="parallax-image w-full h-auto object-cover shadow-lg">
+          </div>
+        </div>  
+  
+        <!-- Text and Technologies -->
+        <div class="flex flex-col justify-between w-full md:w-1/2">
+          <!-- Project Description -->
+          <div class="text-center md:text-left mt-8 md:mt-0">
+            <h2 class="text-2xl md:text-3xl font-Anton text-white">BARS E-COMMERCE</h2>
+            <p class="text-lg text-white mt-4 mr-0 md:mr-5">
+              Bars E-Commerce Platform is a modern online store designed for chocolate enthusiasts. It aims to provide a seamless and secure shopping experience with features like user authentication, session management, an intuitive admin dashboard, and dynamic product handling. Built with Laravel and styled using Tailwind CSS, the platform combines performance, functionality, and a visually appealing design to deliver a delightful user experience.                </p>
+          </div>
+  
+          <!-- Technologies Section -->
+          <div class="grid grid-cols-3 gap-2 mt-8">
+            <!-- Technology Cards -->
+            <div class="tech-card"><span><i class="fa-brands fa-html5"></i> HTML</span></div>
+            <div class="tech-card"><span><i class="fa-brands fa-css3-alt"></i> CSS Tailwind</span></div>
+            <div class="tech-card"><span><i class="fa-brands fa-js"></i> JavaScript</span></div>
+            <div class="tech-card"><span><i class="fa-brands fa-php"></i> PHP</span></div>
+            <div class="tech-card"><span><i class="fa-brands fa-laravel"></i> Laravel</span></div>
+            <div class="tech-card"><span><i class="fa-solid fa-database"></i> MySQL</span></div>
+            
+          </div>
         </div>
-      </div>
-
-      <!-- Email Section -->
-      <div class="text-center md:text-left">
-        <p class="text-lg md:text-xl text-white font-semibold">Prefer email? Sounds good.</p>
-        <p class="text-lg md:text-xl text-white font-semibold">
-          I’m over at 
-          <a href="mailto:puldithaw@gmail.com" class="text-black hover:underline">Puldithaw@gmail.com</a>.
-        </p>
       </div>
     </div>
-  </div>
+  </section>
+
+  <section id="about" class="min-h-screen flex items-center justify-center bg-black text-white px-6">
+    <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16 max-w-7xl mx-auto">
+      <!-- Left Section - Circular Image -->
+      <div class="relative w-48 h-48 md:w-64 md:h-64 lg:w-96 lg:h-96 overflow-hidden rounded-full border-4 border-gray-700 shadow-lg ">
+        <img 
+          src="img/pulditha.webp" 
+          alt="Your Image" 
+          class="w-full h-full object-cover "
+        />
+      </div>
+  
+      <!-- Right Section - Text -->
+      <div class="flex flex-col items-center md:items-start text-center md:text-left">
+        <h1 class="text-4xl md:text-6xl font-Anton mb-8 text-white lg:text-left text-center">About me</h1>
+        <p class="text-base md:text-lg lg:text-xl mb-6 md:mb-8 max-w-md md:max-w-lg lg:max-w-2xl leading-relaxed text-gray-300">
+          Hi, I'm <span class="text-blue-500 font-medium">Pulditha Wathsal</span>, 
+          a passionate web developer with a knack for crafting engaging front-end designs 
+          and robust back-end systems. I aim to innovate and create impactful digital solutions.
+        </p>
+        <a 
+          href="CB011498_Amaranayekage Pulditha Wathsal Premaratne_ SE.pdf" 
+          download
+          class="bg-customOrange font-Anton text-white py-3 px-8 md:py-4 md:px-10 rounded-lg shadow-md hover:bg-orange-700 transition-all text-sm md:text-base lg:text-xl"
+        >
+        <i class="fa-solid fa-circle-down"></i>  Download My CV
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+
+  <section id="projects" class="h-screen w-full overflow-x-scroll snap-x snap-mandatory flex bg-gray-900 text-white scroll-smooth">
+  still being fixed , please check back later
 </section>
 
+  
 
-      
- 
+  
+  
 
-      <script src="main.js"></script>
+  <section id="skills" class="h-screen flex flex-col items-center justify-center bg-gray-500">
+      <h2 class="text-4xl font-semibold text-white mb-4">Skills</h2>
+      <p class="text-lg text-gray-200 max-w-md text-center">List of your skills with icons or categories...</p>
+  </section>
+
+  <section id="contact" class="h-screen flex flex-col items-center justify-center bg-gray-600">
+      <h2 class="text-4xl font-semibold text-white mb-4">Contact Me</h2>
+      <form class="flex flex-col space-y-4 w-full max-w-sm">
+          <input type="text" placeholder="Your Name" class="p-3 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500">
+          <input type="email" placeholder="Your Email" class="p-3 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500">
+          <textarea placeholder="Your Message" class="p-3 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500"></textarea>
+          <button type="submit" class="p-3 rounded bg-gray-800 text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500">Send</button>
+      </form>
+  </section>
+
+
+       <script src="main.js"></script>
       </body>
       </html>
