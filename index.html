@@ -1,128 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pulditha Wathsal Portfolio</title>
-    <link href="./dist/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulditha Wathsal Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
 
-    <body class="bg-gray-100 text-gray-800">
-      <!-- Hero Section -->
-      <section id="home" class="h-screen flex items-center justify-center bg-black relative">
-        <!-- Navbar -->
-        <header
-          class="text-3xl text-white font-Anton absolute top-0 right-0 h-full w-60 flex flex-col justify-center items-center space-y-4">
-          <nav>
-            <ul class="space-y-4">
-              <li><a href="#home" class="hover:text-customOrange transform -rotate-90"><i
-                    class="fa-solid fa-circle-chevron-right"></i> Home</a></li>
-              <li><a href="aboutme.html" class="hover:text-customOrange transform -rotate-90"><i
-                    class="fa-solid fa-circle-chevron-right"></i> About</a></li>
-              <li><a href="projects.html" class="hover:text-customOrange transform -rotate-90"><i
-                    class="fa-solid fa-circle-chevron-right"></i> Projects</a></li>
-              <li><a href="#contact" class="hover:text-customOrange transform -rotate-90"><i
-                    class="fa-solid fa-circle-chevron-right"></i> Contact</a></li>
-            </ul>
-          </nav>
-        </header>
-      
-        <!-- Hamburger -->
-        <button id="hamburger" class="md:hidden top-4 right-4 z-50 fixed">
-          <i class="fa-solid fa-bars text-3xl text-white"></i>
-        </button>
-        
-        <div id="mobile-menu"
-          class="font-Anton hidden fixed top-4 right-4 bg-black text-white p-6 rounded-lg shadow-lg z-50 flex flex-col space-y-4">   
-          <a href="#home" class="block hover:text-customOrange "><i
-            class="fa-solid fa-circle-chevron-right"></i> Home</a>
-          <a href="aboutme.html" class="block hover:text-customOrange"><i
-            class="fa-solid fa-circle-chevron-right"></i> About</a>
-          <a href="projects.html" class="block hover:text-customOrange"><i
-            class="fa-solid fa-circle-chevron-right"></i> Projects</a>
-          <a href="#contact" class="block hover:text-customOrange"><i
-            class="fa-solid fa-circle-chevron-right"></i> Contact</a>
-               </div>
+<body class=" text-white">
+
+<div class="cursor-dot" data-cursor-dot></div>
+<div class="cursor-outline" data-cursor-outline></div>
+
+  <div class="text-[#1B1B19] fixed-navbar fixed w-full px-6 py-2 flex items-center justify-between z-50 ">
+    <div class="text-2xl name"><a href="#home">Pulditha wathsal</a></div>
+    <button id="hamburger" class="text-3xl">
+      <i class="fa-solid fa-bars"></i>
+      <i class="fa-solid fa-x hidden"></i>
+      <div class="hidden" id="debugger2"></div>
+    </button>
+  </div>
+  
+  <nav id="navMenu" style="background-color: #1B1B19;" class="fixed top-0 left-0 w-full h-full transform -translate-y-full transition-transform duration-1000 z-40 flex flex-col items-center justify-center">
+    <ul class="flex flex-col items-center justify-center text-6xl sm:text-7xl md:text-[9rem]">
+      <li><a href="#home" class="text-[#C4BCB3]">Home</a></li>
+      <li><a href="#about" class="text-[#C4BCB3]">About</a></li>
+      <li><a href="#projects" class="text-[#C4BCB3]">Projects</a></li>
+      <li><a href="#contact" class="text-[#C4BCB3]">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Scroll Down Section -->
+  <div class="w-screen h-screen bg-gradient-to-b from-[#C4BCB3] via-[#C5BEB4] to-[#C2BBB1] relative flex items-center justify-center" id="home">
+    <!-- Center Text -->
+    <div class="absolute inset-0 flex flex-col items-center justify-center">
+      <div class="text-4xl sm:text-6xl md:text-8xl  text-black">
+        <span class="auto-type"></span>
       </div>
-      
-        <!-- Name in Top-Right Corner -->
-        <div class="text-lg font-Pacifico p-2 fixed top-2 left-1 text-white z-50">Pulditha Wathsal</div>
-      </section>
-      
-      
-      
-      <section id="projects" class="py-20 bg-gradient-to-b from-customDarkblue to-customBlue h-auto">
-        <div class="container mx-auto">
-          <!-- Header -->
-          <div class="text-left ml-5 md:ml-20 lg:ml-40">
-            <h1 class="text-4xl md:text-6xl font-Anton mb-8 text-white lg:text-left text-center">My Latest Project</h1>
-          </div>
-      
-          <!-- Project Details with Image -->
-          <div class="flex flex-col items-center md:flex-row md:items-start md:ml-20 lg:ml-40 md:space-x-6 py-10">
-            <!-- Image -->
-            <div class="relative overflow-hidden w-full md:w-1/2 lg:flex-grow">
-              <div class="parallax-container">
-                <img src="img/bars.webp" 
-                     alt="latest-project" 
-                     class="parallax-image w-full h-auto object-cover shadow-lg">
-              </div>
-            </div>  
-      
-            <!-- Text and Technologies -->
-            <div class="flex flex-col justify-between w-full md:w-1/2">
-              <!-- Project Description -->
-              <div class="text-center md:text-left mt-8 md:mt-0">
-                <h2 class="text-2xl md:text-3xl font-Anton text-white">BARS E-COMMERCE</h2>
-                <p class="text-lg text-white mt-4 mr-0 md:mr-5">
-                  Bars E-Commerce Platform is a modern online store designed for chocolate enthusiasts. It aims to provide a seamless and secure shopping experience with features like user authentication, session management, an intuitive admin dashboard, and dynamic product handling. Built with Laravel and styled using Tailwind CSS, the platform combines performance, functionality, and a visually appealing design to deliver a delightful user experience.                </p>
-              </div>
-      
-              <!-- Technologies Section -->
-              <div class="grid grid-cols-3 gap-2 mt-8">
-                <!-- Technology Cards -->
-                <div class="tech-card"><span><i class="fa-brands fa-html5"></i> HTML</span></div>
-                <div class="tech-card"><span><i class="fa-brands fa-css3-alt"></i> CSS Tailwind</span></div>
-                <div class="tech-card"><span><i class="fa-brands fa-js"></i> JavaScript</span></div>
-                <div class="tech-card"><span><i class="fa-brands fa-php"></i> PHP</span></div>
-                <div class="tech-card"><span><i class="fa-brands fa-laravel"></i> Laravel</span></div>
-                <div class="tech-card"><span><i class="fa-solid fa-database"></i> MySQL</span></div>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <section id="about" class="py-20 bg-black text-white h-screen flex items-center">
-        <div class="container mx-auto flex flex-col md:flex-row items-center md:space-x-10 relative">
-      
-          <!-- Image Section -->
-          <div class="md:w-1/2 flex justify-center mb-8 md:mb-0">
-            <div class="w-64 h-64 max-w-sm rounded-full overflow-hidden shadow-lg md:h-64 md:w-64 lg:h-80 lg:w-80 .card">
-              <img src="img/pulditha.webp" alt="dp" class="w-full h-full object-cover card">
-            </div>
-          </div>
-      
-          <!-- Text and Button Section -->
-          <div class="md:w-5/6 text-center md:text-left">
-            <h2 class="text-4xl md:text-6xl font-Anton mb-6">About Me</h2>
-            <p class="text-lg text-gray-300 leading-relaxed mb-6 aboutpara">
-              Hey there! 👋 I'm a passionate software engineering student. Armed with my trusty toolkit of HTML, CSS, JavaScript, PHP, Laravel, React, and Angular, I love transforming blank screens into beautiful, user-friendly masterpieces. I'm an aspiring full-stack developer and web designer.
-            </p>
-      
-         
-          </div>
-        </div>
-      </section>
-      
+      <h1 class="text-6xl sm:text-7xl md:text-[9rem] font-extrabold text-[#1B1B19] mt-4 dev">Developer</h1>
+    </div>
+  
+    <!-- Bottom Wave Divider -->
+    <div class="custom-shape-divider-bottom-1736577330">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+      </svg>
+    </div>
+  </div>
 
-<!-- Contact Section -->
-<section id="contact" 
-  class="py-20 bg-gradient-to-b from-customDarkyellow to-customLightyellow text-white h-screen flex items-center overflow-hidden">
-  <div class="container mx-auto px-4">
-    <h2 class="text-4xl md:text-6xl font-Anton mt-6 mb-6 text-center">Contact Me</h2>
+  <section id="latest-project" style="background-color: #1B1B19;" class="py-20  h-auto">
+    <div class="container mx-auto">
+      <!-- Header -->
+      <div class="text-left ml-5 md:ml-20 lg:ml-40">
+        <h1 class="text-4xl md:text-6xl  mb-8 text-[#C4BCB3] lg:text-left text-center latest">My Latest Project</h1>
+      </div>
+      <!-- Project Details with Image -->
+      <div class="flex flex-col items-center md:flex-row md:items-start md:ml-20 lg:ml-40 md:space-x-6 py-10">
+        <!-- Image -->
+        <div class="relative overflow-hidden w-full md:w-1/2 lg:flex-grow block">
+          <div class="parallax-container">
+            <img src="img/bars.webp" 
+                 alt="latest-project" 
+                 class=" w-full h-auto object-cover shadow-lg">
+          </div>
+        </div>  
+        <!-- Text and Technologies -->
+        <div class="flex flex-col justify-between w-full md:w-1/2 block ">
+          <!-- Project Description -->
+          <div class="text-center md:text-left mt-8 md:mt-0">
+            <h2 class="text-2xl md:text-3xl text-white">BARS E-COMMERCE</h2>
+            <p class="text-lg text-white mt-4 mr-0 md:mr-5">
+              Bars E-Commerce Platform is a modern online store designed for chocolate enthusiasts. It aims to provide a seamless and secure shopping experience with features like user authentication, session management, an intuitive admin dashboard, and dynamic product handling. Built with Laravel and styled using Tailwind CSS, the platform combines performance, functionality, and a visually appealing design to deliver a delightful user experience.                </p>
+          </div>
+          <!-- Technologies Section -->
+          <div class="grid grid-cols-3 gap-2 mt-8">
+            <!-- Technology Cards -->
+            <div class="tech-card"><span><i class="fa-brands fa-html5"></i> HTML</span></div>
+            <div class="tech-card"><span><i class="fa-brands fa-css3-alt"></i> CSS Tailwind</span></div>
+            <div class="tech-card"><span><i class="fa-brands fa-js"></i> JavaScript</span></div>
+            <div class="tech-card"><span><i class="fa-brands fa-php"></i> PHP</span></div>
+            <div class="tech-card"><span><i class="fa-brands fa-laravel"></i> Laravel</span></div>
+            <div class="tech-card"><span><i class="fa-solid fa-database"></i> MySQL</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+  
+  
+  </div>
+
+  
+  <div class="racesWrapper overflow-hidden relative" id="about">
+    <div class="races flex">
+      <section class="w-screen h-screen flex flex-col items-center justify-center text-white bg-[#C4BCB3] shrink-0">
+        <!-- Title -->
+        <div class="aboutme text-center text-[#1B1B19]" id="about-title">
+          <h1 class="text-4xl md:text-6xl font-bold">About Me</h1>
+        </div>
+    
+        <!-- Image -->
+        <div class="my-4" id="about-image">
+          <img src="img/pulditha.webp" alt="pulditha-wathsal" class="rounded-full w-40 h-40 md:w-48 md:h-48 object-cover">
+        </div>
+        
+        <!-- Divider Line -->
+        <div class="relative w-full md:w-3/4 lg:w-1/2 my-4 flex items-center" id="about-divider">
+          <div class="flex-grow h-[1px] bg-[#1B1B19]"></div>
+          <div class="w-4 h-4 rotate-45 bg-[#1B1B19] -ml-2"></div>
+        </div>
+        
+    
+        <!-- Description -->
+        <div class="text-center px-6" id="about-description">
+          <p class="text-sm md:text-xl leading-relaxed text-[#1B1B19]">
+            Hi! I’m Pulditha Wathsal, a passionate web / Fullstack developer with a knack for creating innovative solutions. I specialize in web development but also excel as a full-stack developer. Let’s connect!
+          </p>
+        </div>
+    
+        <!-- Download CV Button -->
+        <div class="mt-6" id="about-button">
+          <div>
+            <button class="magneto" onclick="window.location.href='CB011498_Amaranayekage Pulditha Wathsal Premaratne_ SE.pdf'">
+              <span class="text">View CV</span>
+            </button>
+            <div class="hidden" id="debugger"></div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="skills" class="w-screen h-screen flex flex-col items-center justify-center text-white bg-[#1B1B19]">
+        <!-- Section Title -->
+        <div class="text-center mb-8">
+          <h1 class="text-4xl md:text-6xl font-bold myskills">My Skills</h1>
+        </div>
+      
+        <!-- Skills List -->
+        <div class="w-3/4 md:w-1/2 space-y-6">
+          <!-- HTML -->
+          <div>
+            <p class="text-lg font-semibold mb-2">HTML <span class="float-right">85%</span></p>
+            <div class="relative w-full h-4 bg-gray-800 rounded-md overflow-hidden">
+              <div class="absolute h-full bg-[#C4BCB3] rounded-md skill-bar" data-percent="85%"></div>
+            </div>
+          </div>
+      
+          <!-- CSS -->
+          <div>
+            <p class="text-lg font-semibold mb-2">CSS <span class="float-right">75%</span></p>
+            <div class="relative w-full h-4 bg-gray-800 rounded-md overflow-hidden">
+              <div class="absolute h-full bg-[#C4BCB3] rounded-md skill-bar" data-percent="75%"></div>
+            </div>
+          </div>
+      
+          <!-- JavaScript -->
+          <div>
+            <p class="text-lg font-semibold mb-2">JavaScript <span class="float-right">60%</span></p>
+            <div class="relative w-full h-4 bg-gray-800 rounded-md overflow-hidden">
+              <div class="absolute h-full bg-[#C4BCB3]  rounded-md skill-bar" data-percent="60%"></div>
+            </div>
+          </div>
+      
+          <!-- Python, C#, PHP -->
+          <div>
+            <p class="text-lg font-semibold mb-2"> PHP <span class="float-right">50%</span></p>
+            <div class="relative w-full h-4 bg-gray-800 rounded-md overflow-hidden">
+              <div class="absolute h-full bg-[#C4BCB3] rounded-md skill-bar" data-percent="50%"></div>
+            </div>
+          </div>
+          <div>
+            <p class="text-lg font-semibold mb-2">Python <span class="float-right">40%</span></p>
+            <div class="relative w-full h-4 bg-gray-800 rounded-md overflow-hidden">
+              <div class="absolute h-full bg-[#C4BCB3] rounded-md skill-bar" data-percent="40%"></div>
+            </div>
+          </div>
+          <div>
+            <p class="text-lg font-semibold mb-2">C# <span class="float-right">40%</span></p>
+            <div class="relative w-full h-4 bg-gray-800 rounded-md overflow-hidden">
+              <div class="absolute h-full bg-[#C4BCB3] rounded-md skill-bar" data-percent="40%"></div>
+            </div>
+          </div>
+      
+          <!-- React, Angular -->
+          <div>
+            <p class="text-lg font-semibold mb-2">React, Angular <span class="float-right">20%</span></p>
+            <div class="relative w-full h-4 bg-gray-800 rounded-md overflow-hidden">
+              <div class="absolute h-full bg-[#C4BCB3] rounded-md skill-bar" data-percent="20%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <section class="bg-neutral-950 p-4 min-h-screen" id="projects">
+    <div class="text-center mb-8">
+      <h1 class="text-3xl md:text-6xl font-bold myskills text-[#C4BCB3]">Projects</h1>
+    </div>
+    <div class="container">
+      <div class="link mb-6 md:mb-8" data-img-src="img/bars.webp">
+        <div class="text">
+          <h2 class="text-lg md:text-2xl font-semibold text-white">BARS</h2>
+          <p class="text-sm md:text-xl text-gray-300">Chocolate E-commerce Platform with PHP Laravel, Tailwind CSS, MySQL</p>
+        </div>
+      </div>
+      <div class="link mb-6 md:mb-8" data-img-src="img/budget_buddy.webp">
+        <div class="text">
+          <h2 class="text-lg md:text-2xl font-semibold text-white">Budget Buddy</h2>
+          <p class="text-sm md:text-xl text-gray-300">Second Hand Buying and Selling Website with more unique features that solve common household problems</p>
+        </div>
+      </div>
+      <div class="link mb-6 md:mb-8" data-img-src="img/hotel.webp">
+        <div class="text">
+          <h2 class="text-lg md:text-2xl font-semibold text-white">YAKA HOTEL</h2>
+          <p class="text-sm md:text-xl text-gray-300">This was my first ever website that was created... just basic plain HTML, CSS, and JS</p>
+        </div>
+      </div>
+      <div class="link" data-img-src="img/naruto.webp">
+        <div class="text">
+          <h2 class="text-lg md:text-2xl font-semibold text-white">Yet to be done...</h2>
+          <p class="text-sm md:text-xl text-gray-300">I am still learning more and more skills, This portfolio showcases all the skills used</p>
+        </div>
+      </div>
+    </div>
+    <div class="hover-img"></div>
+  </section>
+  
+
+  <section id="contact" 
+  class="py-20 bg-[#C2BBB1] text-[#1B1B19] h-screen flex items-center ">
+  <div class=" mx-auto px-4">
+    <h2 class="text-4xl md:text-6xl  mt-4 mb-6 text-center contact">Contact Me</h2>
 
     <!-- Contact Form -->
     <form class="grid grid-cols-1 gap-4 max-w-lg mx-auto">
@@ -159,7 +275,7 @@
       <div>
         <button 
           type="submit" 
-          class="w-full bg-white text-black px-6 py-3 text-lg md:text-xl rounded hover:bg-customorange transition-all duration-300"
+          class="w-full bg-white text-black px-6 py-3 text-lg md:text-xl rounded shadow-md"
         >
           Send
         </button>
@@ -167,15 +283,15 @@
     </form>
     
     <!-- Get in Touch Section -->
-    <div class="flex flex-col md:flex-row justify-between items-center mt-12 space-y-6 md:space-y-0 md:space-x-12">
+    <div class="flex flex-col md:flex-row justify-between items-center  space-y-6 md:space-y-0 md:space-x-12">
       <!-- Social Links -->
       <div class="text-center md:text-left">
-        <h2 class="text-3xl md:text-4xl font-Anton text-white mb-4">Get in Touch</h2>
+        <h2 class="text-3xl md:text-4xl font-Anton text-[#1B1B19] mt-2 md:mt-12 intouch">Get in Touch</h2>
         <div class="flex justify-center md:justify-start space-x-6">
-          <a href="https://www.linkedin.com/in/pulditha-wathsal/" class="text-4xl md:text-5xl text-white hover:text-black transition-all duration-300">
+          <a href="https://www.linkedin.com/in/pulditha-wathsal/" class="text-4xl md:text-5xl text-[#1B1B19] hover:text-white transition-all duration-300">
             <i class="fa-brands fa-linkedin"></i>
           </a>
-          <a href="https://github.com/" class="text-4xl md:text-5xl text-white hover:text-black transition-all duration-300">
+          <a href="https://github.com/Pulditha" class="text-4xl md:text-5xl text-[#1B1B19] hover:text-white transition-all duration-300">
             <i class="fa-brands fa-github"></i>
           </a>
         </div>
@@ -183,17 +299,24 @@
 
       <!-- Email Section -->
       <div class="text-center md:text-left">
-        <p class="text-lg md:text-xl text-white font-semibold">Prefer email? Sounds good.</p>
-        <p class="text-lg md:text-xl text-white font-semibold">
+        <p class="text-lg md:text-xl text-[#1B1B19] font-semibold">Prefer email? Sounds good.</p>
+        <p class="text-lg md:text-xl text-[#1B1B19] font-semibold">
           I’m over at 
-          <a href="mailto:puldithaw@gmail.com" class="text-black hover:underline">Puldithaw@gmail.com</a>.
+          <a href="mailto:puldithaw@gmail.com" class="text-white hover:underline">Puldithaw@gmail.com</a>.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-      <script src="main.js"></script>
-      </body>
-      </html>
 
+
+  <!-- GSAP and ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="main.js"></script>
+
+</body>
+
+</html>

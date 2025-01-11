@@ -1,183 +1,443 @@
 
-      /* Add transitions if desired */
-      html {
-        scroll-behavior: smooth; /* Smooth scrolling for links */
+
+.luckiest-guy-regular {
+  font-family: "Luckiest Guy", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.Pacifico-regular {
+  font-family: "pacifico", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+    background: #15151e;
+    overflow-x: hidden;
+    background-color: none; 
+    cursor: none;
+  }
+
+/* custom cursor */
+.cursor-dot{
+  width:10px;
+  height:10px;
+  background-color: white;
+}
+
+.name{
+  font-family: "pacifico";
+}
+  
+.cursor-outline{
+  width: 30px;
+  height:30px;
+  border: 2px solid hsla(0,0%,100%,0.5);
+}
+
+.cursor-dot,
+.cursor-outline{
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  z-index: 10000;
+  pointer-events: none;
+}
+
+
+  .overlay.hidden {
+    display: none;
+  }
+
+
+  .fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #C4BCB3; /* Tailwind's bg-gray-800 */
+    padding: 1rem 1.5rem;
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.8s ease;
+    border-bottom: 2px solid #1B1B19; /* Add a bottom border */
+  }
+
+  .fixed-navbar.open {
+    background-color: #1B1B19; 
+    color: #C4BCB3; 
       }
-        
-        /* Technology cards styling */
-        .tech-card {
-          position: relative;
-          padding: 10px;
-          
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-          border-radius: 8px;
-          text-align: center;
-          color: white;
-          font-size: 1rem;
-          font-weight: 500;
-        }
-        
-        .tech-card span {
-          position: relative;
-         
-        }
-        
-        .tech-card::before {
-          content: "";
-          position: absolute;
-          inset: 0;
-          background-color: white;
-          opacity: 0.15;
-          border-radius: 8px;
-          z-index: 0;
-        }
-      
-        
-      #home {
-          background-image: url('img/Hero.webp'); 
-          background-attachment: fixed;
-          background-size: contain;
-          background-position: center;
-          min-height: 100vh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          background-repeat: no-repeat;
-          
-          
-          
-      }
-      
-      
-      /* Optional styling for content */
-      #home .content {
-          z-index: 1;
-          position: relative;
-          color: white;
-      }
-      
-      
-      @media (max-width: 900px) {
-        #home {
-          min-height: 30vh;
-        }
-      }
-      @media (max-width: 650px) {
-        #home {
-          height: 350px;
-           /* Make the image larger */
-           background-position: center top 10%; /* Move the image upwards */ /* Adjust the section height on smaller screens */
-           
-        }
-        .aboutpara{
-          font-size: large;
-        }
-      }
-      
-      /* mobile responisve */
-      /* Navbar for smaller screens */
-      
-        #mobile-menu {
-          display: none;
-          position: fixed;
-          top: 4rem; /* Adjusted to appear below the hamburger button */
-          right: 1rem;
-          width: 200px;
-          background-color: black;
-          color: white;
-          padding: 1rem;
-          border-radius: 0.5rem;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          z-index: 9999;
-        }
-        
-        /* Active state for the mobile menu */
-        #mobile-menu.active {
-          display: flex;
-          flex-direction: column;
-          gap: 1rem;
-          animation: fadeIn 0.3s ease-in-out;
-        }
-        
-        /* Animation for smooth menu appearance */
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(-10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        /* Hamburger icon styles */
-        #hamburger {
-          position: fixed;
-          top: 1rem;
-          right: 1rem;
-          z-index: 10000;
-        }
-        
-        #hamburger i {
-          transition: transform 0.3s ease-in-out;
-        }
-        
-       
-        .fa-bars-staggered {
-          transform: scale(1.1);
-        }
-      
-      /* Hide navbar below 1200px */
-      @media (max-width: 1200px) {
-        header {
-          display: none !important; 
-        }
-      }
-      @media (max-width: 1200px) {
-        #hamburger {
-          display: block;
-        }
-      
-        #mobile-menu {
-          display: none;
-        }
-      
-        /* Make the menu appear below the hamburger when toggled */
-        #mobile-menu.active {
-          display: flex;
-        }
-      }
-      
-      
-      /* Make the "About Me" section fixed */
-      #about {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh; /* Full viewport height */
-        z-index: -1; /* Ensure it's above other sections */
-      }
-      
-      /* Adjust other sections to scroll past */
-      #home,
-      #projects,
-      #contact {
-      
-        z-index: 1;
-         /* Leave space for the fixed "About Me" section */
-      
-        }
-      
-      
-      #contact{
-        margin-top: 100vh;
-      }
-      
-      /* Ensure the background color of each section works well */
-      #about {
-        background-color: black; /* Ensure visibility of "About Me" */
-      }
-      
+  
+  #navMenu {
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out; /* Initially hidden */
+  }
+  
+  #navMenu.open {
+    transform: translateY(0); /* Fully visible */
+   
+  }
+  
+  nav ul li a {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    transform: scale(1.1); /* Slightly expand the letters */
+    color: #FFFFFF; /* Optional: Change the color on hover */
+  }
+
+  
+  #home{
+    background-color: #C2BAB0; /* Tailwind's bg-gray-800 */
+  }
+  
+  #hamburger i {
+    transition: opacity 0.2s ease;
+  }
+  
+  #hamburger i.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  #navMenu {
+    font-family: "Luckiest Guy";
+   
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Full-screen height */
+    background-color: #bcbcc4; /* Tailwind's bg-gray-800 */
+    transform: translateY(-100%);
+    transition: transform 1s ease; /* Smooth slide down */
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #navMenu.open {
+    transform: translateY(0);
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  li a::after {
+    content: "";
+    position: absolute;
+    top: 50%; /* Align the line vertically at the center of the text */
+    left: 0;
+    width: 0;
+    height: 10px;
+    background-color: rgb(255, 73, 73);
+    transform: translateY(-50%);
+    transition: width 0.3s ease;
+  }
+  
+  li a.active::after {
+    width: 100%; /* Full width of the link when active */
+  }
+  
+  
+  
+  
+  .racesWrapper {
+    position: relative;
+  }
+  
+  .races {
+    width: fit-content;
+  }
+  
+  /* .header {
+    /* width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    height: 100%; Ensures it fills the available vertical space } */
+
+  .header .h1{
+    position: relative;
+    font-family: "Luckiest Guy";
+    font-size: 15vw;
+    color: #1a1a1a;
+    line-height: 1.125;
+   
+  }
+
+
+  .overlay{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 51;
+    display: flex;
+  }
+
+  .bar{
+    width: 10vw;
+    height: 105vh;
+    background: #1a1a1a;
+  }
+
+  .counter{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 1000;
+    color: #bcbcc4;
+    padding: 0.2em 0.4em;
+    font-size: 20vw;
+    font-family: "Luckiest Guy";
+  }
+
+  
+  
+  #menuToggle,
+  #menuIcon {
+    pointer-events: auto; /* Allow clicks on the hamburger menu */
+  }
+  
+
+  @media (max-width: 768px) {
+    .header {
+      height: 50%; /* Adjust height to fit the vertical centering */
+      align-items: center;
+      justify-content: space-around; /* Space out horizontally */
+      padding: 1em;
+    }
+  
+    .header .h1 {
+      font-size: 18vw; /* Adjust size for smaller screens */
+    }
+
+   .cursor-dot,.cursor-outline{
+    display: none;
+   }
+  }
+
+
+  .tech-card {
+    position: relative;
+    padding: 10px;
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .tech-card span {
+    position: relative;
+   
+  }
+  
+  .tech-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: white;
+    opacity: 0.15;
+    border-radius: 8px;
+    z-index: 0;
+  }
+
+
+  #latest-project{
+    position: relative;
+  }
+
+  @keyframes appear{
+    from{
+      opacity:0;
+      scale:0.4;
+    }
+    to{
+      opacity:1;
+      scale:1;
+    }
+  }
+
+  .block{
+    animation:appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+  }
+
+  .latest{
+    font-family: "Luckiest Guy";
+  }
+  .custom-shape-divider-bottom-1736577330 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1736577330 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 81px;
+}
+
+.custom-shape-divider-bottom-1736577330 .shape-fill {
+    fill: #1B1B19;
+}
+
+.dev,.aboutme,.myskills,.contact,.intouch{
+  font-family: "Luckiest Guy";
+}
+
+
+/* Style for active navbar */
+#fixedNavbar.active-navbar {
+  background-color: #1B1B19;
+  color: #C4BCB3;
+}
+
+/* Adjust navMenu to start from the top */
+#navMenu {
+  top: 0; /* Already set, ensures menu starts from the top */
+}
+
+
+
+/* about me  */
+.magneto{
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: none;
+  background-color: #15151e;
+  color: #C4BCB3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .magneto {
+    width: 7rem;
+    height: 7rem;
+    font-size: 0.875rem;
+    border-radius: 50%;
+  border: none;
+  background-color: #15151e;
+  color: #C4BCB3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+}
+
+
+.skill-bar {
+  width: 0; /* Start with 0 width for animation */
+  transition: width 1s ease-in-out;
+}
+
+
+
+.bg-neutral-950 {
+  background-color: #121212;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Link Styling */
+.link {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 2px solid #444;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.link:hover {
+  border-color: #fff;
+}
+
+.text h2 {
+  font-weight: bold;
+  margin: 0;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.text p {
+ 
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.link:hover h2,
+.link:hover p {
+  color: #fff;
+}
+
+/* Hover Image Styling */
+.hover-img {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  width: 400px;
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  transform: translate(-10%, -10%) scale(0);
+  pointer-events: none;
+  transition: transform 0.1s;
+  z-index: 10;
+}
+
+
+@media (max-width: 768px) {
+  .custom-shape-divider-bottom svg {
+    height: 10px; /* Reduce the height for smaller screens */
+  }}
+
+
+
+
+  
