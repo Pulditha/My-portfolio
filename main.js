@@ -501,7 +501,6 @@ gsap.registerPlugin(ScrollTrigger);
 // GSAP Animation for random lines forming the grid
 const gridLines = document.querySelectorAll('.grid-line');
 
-// Prepare horizontal and vertical animations
 const gridAnimation = gsap.timeline();
 const duration = 1.5;
 const stagger = 0.1;
@@ -511,7 +510,6 @@ for (let i = 0; i < gridLines.length; i++) {
   const direction = Math.random() > 0.5 ? 1 : -1; // Randomly decide the direction
 
   if (isHorizontal) {
-    // Horizontal line
     gridAnimation.fromTo(
       gridLines[i],
       { scaleX: 0, opacity: 0, transformOrigin: direction > 0 ? 'left' : 'right' },
@@ -525,7 +523,6 @@ for (let i = 0; i < gridLines.length; i++) {
       i * stagger
     );
   } else {
-    // Vertical line
     gridAnimation.fromTo(
       gridLines[i],
       { scaleY: 0, opacity: 0, transformOrigin: direction > 0 ? 'top' : 'bottom' },
@@ -543,65 +540,62 @@ for (let i = 0; i < gridLines.length; i++) {
 
 // ScrollTrigger for scaling grid container on scroll
 gsap.to(gridContainer, {
-  scale: 1.2, // Slight zoom effect
-  rotation: 5, // Subtle rotation
+  scale: 1.2,
+  rotation: 5,
   duration: 2,
   scrollTrigger: {
-    trigger: '#home',
+    trigger: gridContainer,
     start: 'top top',
     end: 'bottom bottom',
-    scrub: true, // Smooth effect
-    toggleActions: 'restart pause reverse pause', // Restart and reverse effects on scroll
+    scrub: true,
+    toggleActions: 'restart pause reverse pause',
   },
 });
-  
-   // Function to animate the highlighter
-   function animateHighlighter() {
-    const highlighter = document.createElement('div');
-    highlighter.classList.add('highlighter');
-    gridContainer.appendChild(highlighter);
 
-    const direction = Math.random() > 0.5 ? 'horizontal' : 'vertical'; // Randomize direction
-    const position = Math.floor(Math.random() * (direction === 'horizontal' ? rows : cols)); // Random row/column
+function animateHighlighter() {
+  const highlighter = document.createElement('div');
+  highlighter.classList.add('highlighter');
+  gridContainer.appendChild(highlighter);
 
-    // Set position and size based on direction
-    if (direction === 'horizontal') {
-      highlighter.style.gridRow = `${position + 1}`;
-      highlighter.style.gridColumn = '1 / -1'; // Span all columns
-      highlighter.style.height = '2px'; // Thin line for horizontal
-      highlighter.style.width = '100%'; // Full width
-      gsap.fromTo(
-        highlighter,
-        { left: '-100%' },
-        {
-          left: '100%',
-          duration: 2,
-          ease: 'power2.inOut',
-          onComplete: () => highlighter.remove(),
-        }
-      );
-    } else {
-      highlighter.style.gridColumn = `${position + 1}`;
-      highlighter.style.gridRow = '1 / -1'; // Span all rows
-      highlighter.style.width = '2px'; // Thin line for vertical
-      highlighter.style.height = '100%'; // Full height
-      gsap.fromTo(
-        highlighter,
-        { top: '-100%' },
-        {
-          top: '100%',
-          duration: 2,
-          ease: 'power2.inOut',
-          onComplete: () => highlighter.remove(),
-        }
-      );
-    }
+  const direction = Math.random() > 0.5 ? 'horizontal' : 'vertical'; // Randomize direction
+  const position = Math.floor(Math.random() * (direction === 'horizontal' ? rows + 1 : cols + 1)); // Match grid lines
 
-    // Schedule the next highlighter animation
-    setTimeout(animateHighlighter, Math.random() * 3000 + 2000); // Random interval between 2-5 seconds
+  // Set position and size based on direction
+  if (direction === 'horizontal') {
+    highlighter.style.top = `${(position * 100) / rows}%`; // Align to horizontal grid line
+    highlighter.style.left = '0';
+    highlighter.style.width = '100%'; // Full width
+    highlighter.style.height = '2px'; // Thin line
+    gsap.fromTo(
+      highlighter,
+      { left: '-100%' },
+      {
+        left: '100%',
+        duration: 2,
+        ease: 'power2.inOut',
+        onComplete: () => highlighter.remove(),
+      }
+    );
+  } else {
+    highlighter.style.left = `${(position * 100) / cols}%`; // Align to vertical grid line
+    highlighter.style.top = '0';
+    highlighter.style.height = '100%'; // Full height
+    highlighter.style.width = '2px'; // Thin line
+    gsap.fromTo(
+      highlighter,
+      { top: '-100%' },
+      {
+        top: '100%',
+        duration: 2,
+        ease: 'power2.inOut',
+        onComplete: () => highlighter.remove(),
+      }
+    );
   }
 
-  // Start the highlighter animation
-  animateHighlighter();
+  // Schedule the next highlighter animation
+  setTimeout(animateHighlighter, Math.random() * 3000 + 2000); // Random interval between 2-5 seconds
+}
 
-  
+// Start the highlighter animation
+animateHighlighter();
