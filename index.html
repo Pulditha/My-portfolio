@@ -13,28 +13,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    
 </head>
 
 <body class=" text-white">
-
-<div class="cursor-dot" data-cursor-dot></div>
-<div class="cursor-outline" data-cursor-outline></div>
-
-<div id="loading-screen">
-  <div class="loading-container">
-    <div id="counter" class="counter">0</div>
-
+  <div class="cursor-dot" data-cursor-dot></div>
+  <div class="cursor-outline" data-cursor-outline></div>
+  
+  <div id="loading-screen">
+    <div class="loading-container">
+      <div id="counter" class="counter">0</div>
+  
+    </div>
   </div>
-</div>
 
-<div class="text-[#1B1B19] fixed-navbar fixed w-full px-6 py-2 flex items-center justify-between z-50">
-  <div class="text-2xl name"><a href="#home">Pulditha wathsal</a></div>
-  <button id="hamburger" class="text-3xl">
+
+      <div class="text-[#1B1B19] fixed-navbar fixed w-full px-6 py-2 flex items-center justify-between z-50">
+        <div class="text-2xl name"><a href="#home">Pulditha wathsal</a></div>
+   <button id="hamburger" class="text-3xl">
     <i class="fa-solid fa-bars"></i>
     <i class="fa-solid fa-x hidden"></i>
     <div class="hidden" id="debugger2"></div>
   </button>
-</div>
+  </div>
 
 <nav id="navMenu" style="background-color: #1B1B19;" class="fixed top-0 left-0 w-full h-full transform -translate-y-full transition-transform duration-1000 z-40 flex flex-col items-center justify-center">
   <ul class="flex flex-col items-center justify-center text-6xl sm:text-7xl md:text-[9rem]">
@@ -47,22 +48,27 @@
 
   <!-- Scroll Down Section -->
   <div class="w-screen h-screen bg-gradient-to-b from-[#C4BCB3] via-[#C5BEB4] to-[#C2BBB1] relative flex items-center justify-center" id="home">
+    <!-- Grid Background -->
+    <div class="absolute inset-0 grid-container pointer-events-none z-0"></div>
+  
     <!-- Center Text -->
-    <div class="absolute inset-0 flex flex-col items-center justify-center">
-      <div class="text-4xl sm:text-6xl md:text-8xl  text-black">
+    <div class="absolute inset-0 flex flex-col items-center justify-center z-10">
+      <div class="text-4xl sm:text-6xl md:text-8xl text-black">
         <span class="auto-type"></span>
       </div>
       <h1 class="text-6xl sm:text-7xl md:text-[9rem] font-extrabold text-[#1B1B19] mt-4 dev">Developer</h1>
     </div>
   
     <!-- Bottom Wave Divider -->
-    <div class="custom-shape-divider-bottom-1736577330">
+    <div class="custom-shape-divider-bottom-1736577330 z-20">
       <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        <path
+          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+          class="shape-fill"></path>
       </svg>
     </div>
   </div>
-
+  
   <section id="latest-project" style="background-color: #1B1B19;" class="py-20  h-auto">
     <div class="container mx-auto">
       <!-- Header -->
@@ -85,7 +91,8 @@
           <div class="text-center md:text-left mt-8 md:mt-0">
             <h2 class="text-2xl md:text-3xl text-white">BARS E-COMMERCE</h2>
             <p class="text-lg text-white mt-4 mr-0 md:mr-5">
-              Bars E-Commerce Platform is a modern online store designed for chocolate enthusiasts. It aims to provide a seamless and secure shopping experience with features like user authentication, session management, an intuitive admin dashboard, and dynamic product handling. Built with Laravel and styled using Tailwind CSS, the platform combines performance, functionality, and a visually appealing design to deliver a delightful user experience.                </p>
+              Bars E-Commerce Platform is an online store designed for chocolate enthusiasts. Built with Laravel and styled using Tailwind CSS,
+               the platform combines performance, functionality, and a visually appealing design to deliver a delightful user experience.</p>
           </div>
           <!-- Technologies Section -->
           <div class="grid grid-cols-3 gap-2 mt-8">
@@ -136,7 +143,7 @@
         <!-- Download CV Button -->
         <div class="mt-6" id="about-button">
           <div>
-            <button class="magneto" onclick="window.location.href='CB011498_Amaranayekage Pulditha Wathsal Premaratne_ SE.pdf'">
+            <button class="magneto" onclick="window.location.href='CB011498_Amaranayekage_Pulditha_Wathsal_Premaratne.pdf'">
               <span class="text">View CV</span>
             </button>
             <div class="hidden" id="debugger"></div>
@@ -316,11 +323,10 @@
   </div>
 </section>
 
-
-
   <!-- GSAP and ScrollTrigger -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollSmoother.min.js"></script>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script src="main.js"></script>
 
