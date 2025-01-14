@@ -485,8 +485,8 @@ document.addEventListener("DOMContentLoaded", () => {
   
 // Create the grid dynamically
 const gridContainer = document.querySelector('.grid-container');
-const cols = 10; // Number of columns
-const rows = 10; // Number of rows
+const cols = 5; // Number of columns
+const rows = 5; // Number of rows
 
 // Generate grid lines dynamically
 for (let i = 0; i < cols * rows; i++) {
@@ -498,59 +498,36 @@ for (let i = 0; i < cols * rows; i++) {
 // Ensure GSAP and ScrollTrigger are registered
 gsap.registerPlugin(ScrollTrigger);
 
-// GSAP Animation for random lines forming the grid
+// GSAP Animation: Lines forming the grid from all sides
 const gridLines = document.querySelectorAll('.grid-line');
 
-const gridAnimation = gsap.timeline();
-const duration = 1.5;
-const stagger = 0.1;
+const gridAnimation = gsap.timeline({ defaults: { duration: 2, ease: 'power2.inOut' } });
+const stagger = 0.15;
 
-for (let i = 0; i < gridLines.length; i++) {
-  const isHorizontal = Math.random() > 0.5; // Randomly decide if the line is horizontal or vertical
-  const direction = Math.random() > 0.5 ? 1 : -1; // Randomly decide the direction
-
-  if (isHorizontal) {
-    gridAnimation.fromTo(
-      gridLines[i],
-      { scaleX: 0, opacity: 0, transformOrigin: direction > 0 ? 'left' : 'right' },
-      {
-        scaleX: 1,
-        opacity: 1,
-        duration,
-        ease: 'power2.out',
-        delay: Math.random() * 0.5, // Add randomness to delay
-      },
-      i * stagger
-    );
+// Animate lines from all sides
+gridLines.forEach((line, index) => {
+  const direction = index % 4; // Rotate between 4 directions
+  if (direction === 0) {
+    // From top
+    gsap.set(line, { scaleY: 0, transformOrigin: 'top', opacity: 0 });
+    gridAnimation.to(line, { scaleY: 1, opacity: 1 }, index * stagger);
+  } else if (direction === 1) {
+    // From left
+    gsap.set(line, { scaleX: 0, transformOrigin: 'left', opacity: 0 });
+    gridAnimation.to(line, { scaleX: 1, opacity: 1 }, index * stagger);
+  } else if (direction === 2) {
+    // From bottom
+    gsap.set(line, { scaleY: 0, transformOrigin: 'bottom', opacity: 0 });
+    gridAnimation.to(line, { scaleY: 1, opacity: 1 }, index * stagger);
   } else {
-    gridAnimation.fromTo(
-      gridLines[i],
-      { scaleY: 0, opacity: 0, transformOrigin: direction > 0 ? 'top' : 'bottom' },
-      {
-        scaleY: 1,
-        opacity: 1,
-        duration,
-        ease: 'power2.out',
-        delay: Math.random() * 0.5, // Add randomness to delay
-      },
-      i * stagger
-    );
+    // From right
+    gsap.set(line, { scaleX: 0, transformOrigin: 'right', opacity: 0 });
+    gridAnimation.to(line, { scaleX: 1, opacity: 1 }, index * stagger);
   }
-}
-
-// ScrollTrigger for scaling grid container on scroll
-gsap.to(gridContainer, {
-  scale: 1.2,
-  rotation: 5,
-  duration: 2,
-  scrollTrigger: {
-    trigger: gridContainer,
-    start: 'top top',
-    end: 'bottom bottom',
-    scrub: true,
-    toggleActions: 'restart pause reverse pause',
-  },
 });
+
+
+
 
 function animateHighlighter() {
   const highlighter = document.createElement('div');
@@ -571,7 +548,7 @@ function animateHighlighter() {
       { left: '-100%' },
       {
         left: '100%',
-        duration: 2,
+        duration: 3, // Slower animation
         ease: 'power2.inOut',
         onComplete: () => highlighter.remove(),
       }
@@ -586,7 +563,7 @@ function animateHighlighter() {
       { top: '-100%' },
       {
         top: '100%',
-        duration: 2,
+        duration: 3, // Slower animation
         ease: 'power2.inOut',
         onComplete: () => highlighter.remove(),
       }
