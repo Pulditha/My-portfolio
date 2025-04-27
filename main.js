@@ -19,106 +19,6 @@ cursorOutline.animate({
 
 
 
-
-// Disable browser scroll restoration
-if ("scrollRestoration" in history) {
-  history.scrollRestoration = "manual";
-}
-
-// Scroll to top on page unload
-window.addEventListener("beforeunload", () => {
-  window.scrollTo(0, 0);
-});
-
-// Ensure ScrollTrigger starts from the top on load
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    window.scrollTo(0, 0); // Force scroll to top
-    ScrollTrigger.refresh(); // Refresh ScrollTrigger for accurate calculations
-  }, 0);
-});
-
-// GSAP and ScrollTrigger setup
-const races = document.querySelector(".races");
-
-function getScrollAmount() {
-  return -(races.scrollWidth - window.innerWidth);
-}
-
-const tween = gsap.to(races, {
-  x: getScrollAmount,
-  duration: 3,
-  ease: "none",
-});
-
-ScrollTrigger.create({
-  trigger: ".racesWrapper",
-  start: "top top",
-  end: () => `+=${races.scrollWidth - window.innerWidth}`,
-  pin: true,
-  animation: tween,
-  scrub: 1,
-  invalidateOnRefresh: true,
-});
-
-// Refresh ScrollTrigger on window resize for responsiveness
-window.addEventListener("resize", () => {
-  ScrollTrigger.refresh();
-});
-
-
-
-
-// // Loader functionality
-// function startLoader() {
-//   let counterElement = document.querySelector(".counter");
-//   let currentValue = 0;
-
-//   function updateCounter() {
-//     if (currentValue === 100) {
-//       return;
-//     }
-//     currentValue += Math.floor(Math.random() * 10) + 1;
-
-//     if (currentValue > 100) {
-//       currentValue = 100;
-//     }
-//     counterElement.textContent = currentValue;
-
-//     let delay = Math.floor(Math.random() * 200) + 50;
-//     setTimeout(updateCounter, delay);
-//   }
-
-//   updateCounter();
-// }
-
-// startLoader();
-
-// gsap.to(".counter", 0.25, {
-//   delay: 3.5,
-//   opacity: 0,
-// });
-// gsap.to(".bar", 1.5, {
-//   delay: 3.5,
-//   height: 0,
-//   stagger: {
-//     amount: 0.5,
-//   },
-//   ease: "power4.inOut",
-// });
-
-// gsap.from(".h1", 1.5, {
-//   delay: 4,
-//   y: 700,
-//   stagger: {
-//     amount: 0.5,
-//   },
-//   ease: "power4.inOut",
-// });
-
-  // Smooth scroll for anchor links
-
-
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("navMenu");
 const navbar = document.querySelector(".fixed-navbar");
@@ -178,7 +78,7 @@ navLinks.forEach((link) => {
 
 
 var typed = new Typed('.auto-type', {
-  strings: ['Fullstack', 'Web'],
+  strings: ['User Interface', 'User Experience','Web'],
   typeSpeed: 150,
   backSpeed: 150, // Note: Corrected 'backspeed' to 'backSpeed'
   loop: true // Corrected 'looped' to 'loop'
@@ -393,8 +293,8 @@ document.addEventListener("DOMContentLoaded", () => {
       gsap.to(hoverImg, {
         duration: 0.2,
         scale: 1,
-        x: mouseX + 15,
-        y: mouseY + 15,
+        x: mouseX ,
+        y: mouseY ,
         opacity: 1,
       });
 

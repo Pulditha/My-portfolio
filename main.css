@@ -163,12 +163,10 @@ body {
   
   
   
-  .racesWrapper {
-    position: relative;
-  }
-  
   .races {
-    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
   
   /* .header {
@@ -394,8 +392,8 @@ body {
 /* Hover Image Styling */
 .hover-img {
   position: fixed;
-  top: 5%;
-  left: 5%;
+  top: 0;
+  left: 0;
   width: 400px;
   height: 220px;
   background-size: cover;
