@@ -1,0 +1,182 @@
+
+body{
+   
+    font-family: 'Luckiest Guy', 'Pacifico', cursive;
+    background-color: #1B1B19;
+}
+
+/* custom cursor */
+.cursor-dot {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+  }
+  
+  .name {
+    font-family: "pacifico";
+  }
+  
+  .cursor-outline {
+    width: 30px;
+    height: 30px;
+    border: 2px solid hsla(0, 0%, 100%, 0.5);
+  }
+  
+  .cursor-dot,
+  .cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 10000;
+    pointer-events: none;
+  }
+  
+  .overlay.hidden {
+    display: none;
+  }
+
+  .fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1b1b19; /* Tailwind's bg-gray-800 */
+    padding: 1rem 1.5rem;
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.8s ease;
+    border-bottom: 2px solid #c4bcb3; /* Add a bottom border */
+  }
+  
+  .fixed-navbar.open {
+    background-color: #c4bcb3;
+    color: #1b1b19;
+  }
+  
+  #navMenu {
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out; /* Initially hidden */
+  }
+  
+  #navMenu.open {
+    transform: translateY(0); /* Fully visible */
+  }
+  
+  nav ul li a {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    transform: scale(1.1); /* Slightly expand the letters */
+    color: #ffffff; /* Optional: Change the color on hover */
+  }
+  
+  #home {
+    background-color: #c2bab0; /* Tailwind's bg-gray-800 */
+  }
+  
+  #hamburger i {
+    transition: opacity 0.2s ease;
+  }
+  
+  #hamburger i.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  #navMenu {
+    font-family: "Luckiest Guy";
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Full-screen height */
+    background-color: #bcbcc4; /* Tailwind's bg-gray-800 */
+    transform: translateY(-100%);
+    transition: transform 1s ease; /* Smooth slide down */
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #navMenu.open {
+    transform: translateY(0);
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  li a::after {
+    content: "";
+    position: absolute;
+    top: 50%; /* Align the line vertically at the center of the text */
+    left: 0;
+    width: 0;
+    height: 10px;
+    background-color: rgb(255, 73, 73);
+    transform: translateY(-50%);
+    transition: width 0.3s ease;
+  }
+  
+  li a.active::after {
+    width: 100%; /* Full width of the link when active */
+  }
+  
+  .races {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+
+  #project-details {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+  }
+  
+  /* Main Image Styling */
+  .main-image img {
+    transform: scale(1);
+    transition: transform 0.5s ease;
+    
+  }
+  
+  /* Main Image Hover Slight Zoom */
+  .main-image img:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Other Images Hover Effect */
+  .other-images img {
+    transform: scale(1);
+    transition: transform 0.4s ease;
+    cursor: pointer;
+  }
+  
+  .other-images img:hover {
+    transform: scale(1.05) rotate(-2deg);
+  }
+  
+  /* Optional: Text Animations if needed */
+  .description {
+    color: #c4bcb3;
+  }

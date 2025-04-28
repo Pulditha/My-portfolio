@@ -476,3 +476,50 @@ function animateHighlighter() {
 
 // Start the highlighter animation
 animateHighlighter();
+
+
+
+const projectImage = document.querySelector('.parallax-container .overlay');
+const projectLink = document.querySelector('.parallax-container a');
+
+projectLink.addEventListener('mouseenter', () => {
+  gsap.to(projectImage, {
+    duration: 0.5,
+    opacity: 1,
+    scale: 1.05,
+    ease: "power2.out",
+  });
+});
+
+projectLink.addEventListener('mouseleave', () => {
+  gsap.to(projectImage, {
+    duration: 0.5,
+    opacity: 0,
+    scale: 1,
+    ease: "power2.inOut",
+  });
+});
+
+
+const phoneButton = document.getElementById('phone-button');
+const phoneNumber = document.getElementById('phone-number');
+let phoneVisible = false;
+
+phoneButton.addEventListener('click', () => {
+  if (!phoneVisible) {
+    gsap.to(phoneNumber, {
+      opacity: 1,
+      scale: 1,
+      duration: 0.4,
+      ease: "back.out(1.7)"
+    });
+  } else {
+    gsap.to(phoneNumber, {
+      opacity: 0,
+      scale: 0,
+      duration: 0.3,
+      ease: "power1.inOut"
+    });
+  }
+  phoneVisible = !phoneVisible;
+});

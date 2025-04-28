@@ -59,14 +59,7 @@
       <h1 class="text-6xl sm:text-7xl md:text-[9rem] font-extrabold text-[#1B1B19] mt-4 dev">Designer</h1>
     </div>
   
-    <!-- Bottom Wave Divider -->
-    <div class="custom-shape-divider-bottom-1736577330 z-20">
-      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path
-          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-          class="shape-fill"></path>
-      </svg>
-    </div>
+
   </div>
   
   <section id="latest-project" style="background-color: #1B1B19;" class="py-20  h-auto">
@@ -79,11 +72,15 @@
       <div class="flex flex-col items-center md:flex-row md:items-start md:ml-20 lg:ml-40 md:space-x-6 py-10">
         <!-- Image -->
         <div class="relative overflow-hidden w-full md:w-1/2 lg:flex-grow block">
-          <div class="parallax-container">
-            <a href="https://bars-chocolate.online/" target="_blank">
-            <img src="img/bars.webp" 
-                 alt="latest-project" 
-                 class=" w-full h-auto object-cover shadow-lg"></a>
+          <div class="parallax-container relative group overflow-hidden">
+            <a href="https://bars-chocolate.online/" target="_blank" class="block relative">
+              <img src="img/bars.webp" 
+                   alt="latest-project" 
+                   class="w-full h-auto object-cover shadow-lg">
+              <div class="overlay absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black bg-opacity-60 opacity-0">
+                Visit Website 
+              </div>
+            </a>
           </div>
         </div>  
         <!-- Text and Technologies -->
@@ -102,7 +99,7 @@
             <div class="tech-card"><span><i class="fa-brands fa-css3-alt"></i> CSS Tailwind</span></div>
             <div class="tech-card"><span><i class="fa-brands fa-js"></i> JavaScript</span></div>
             <div class="tech-card"><span><i class="fa-brands fa-php"></i> PHP</span></div>
-            <div class="tech-card"><span><i class="fa-brands fa-laravel"></i> Laravel</span></div>
+            <div class="tech-card"><span><i class="fa-brands fa-figma"></i> Figma</span></div>
             <div class="tech-card"><span><i class="fa-solid fa-database"></i> MySQL</span></div>
           </div>
         </div>
@@ -124,7 +121,7 @@
     
         <!-- Image -->
         <div class="my-4" id="about-image">
-          <img src="img/pulditha.webp" alt="pulditha-wathsal" class="rounded-full w-40 h-40 md:w-48 md:h-48 object-cover">
+          <img src="img/pulditha.webp" alt="pulditha-wathsal" class="rounded-full w-40 h-40 md:w-64 md:h-64 object-cover">
         </div>
         
         <!-- Divider Line -->
@@ -221,7 +218,7 @@
       <h1 class="text-3xl md:text-6xl font-bold myskills text-[#C4BCB3]">Projects</h1>
     </div>
     <div class="container">
-      <a href="https://bars-chocolate.online/">
+      <a href="project-1.html">
       <div class="link mb-6 md:mb-8" data-img-src="img/bars.webp">
         <div class="text">
           <h2 class="text-lg md:text-2xl font-semibold text-white">BARS</h2>
@@ -229,7 +226,7 @@
         </div>
       </a>
       </div>
-      <a href="https://budgetbuddy.ceygenic.co/">
+      <a href="project-2.html">
       <div class="link mb-6 md:mb-8" data-img-src="img/budget_buddy.webp">
         <div class="text">
           <h2 class="text-lg md:text-2xl font-semibold text-white">Budget Buddy</h2>
@@ -237,11 +234,13 @@
         </div>
       </a>
       </div>
+      <a href="project-3.html">
       <div class="link mb-6 md:mb-8" data-img-src="img/hotel.webp">
         <div class="text">
           <h2 class="text-lg md:text-2xl font-semibold text-white">YAKA HOTEL</h2>
           <p class="text-sm md:text-xl text-gray-300">This was my first ever website that was created... just basic plain HTML, CSS, and JS</p>
         </div>
+      </a>
       </div>
       <div class="link" data-img-src="img/naruto.webp">
         <div class="text">
@@ -301,30 +300,53 @@
       </div>
     </form>
     
-    <!-- Get in Touch Section -->
-    <div class="flex flex-col md:flex-row justify-between items-center  space-y-6 md:space-y-0 md:space-x-12">
-      <!-- Social Links -->
-      <div class="text-center md:text-left">
-        <h2 class="text-3xl md:text-4xl font-Anton text-[#1B1B19] mt-2 md:mt-12 intouch">Get in Touch</h2>
-        <div class="flex justify-center md:justify-start space-x-6">
-          <a href="https://www.linkedin.com/in/pulditha-wathsal/" class="text-4xl md:text-5xl text-[#1B1B19] hover:text-white transition-all duration-300">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/Pulditha" class="text-4xl md:text-5xl text-[#1B1B19] hover:text-white transition-all duration-300">
-            <i class="fa-brands fa-github"></i>
-          </a>
-        </div>
-      </div>
+ <!-- Get in Touch Section -->
+<div class="flex flex-col md:flex-row justify-between items-center space-y-12 md:space-y-0 md:space-x-12">
 
-      <!-- Email Section -->
-      <div class="text-center md:text-left">
-        <p class="text-lg md:text-xl text-[#1B1B19] font-semibold">Prefer email? Sounds good.</p>
-        <p class="text-lg md:text-xl text-[#1B1B19] font-semibold">
-          I’m over at 
-          <a href="mailto:puldithaw@gmail.com" class="text-white hover:underline">Puldithaw@gmail.com</a>.
-        </p>
-      </div>
+  <!-- Social Links -->
+  <div class="text-center md:text-left">
+    <h2 class="text-3xl md:text-4xl font-Anton text-[#1B1B19] mt-2 md:mt-12 intouch">Get in Touch</h2>
+
+    <div class="flex justify-center md:justify-start space-x-6 mt-4 items-center">
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/pulditha-wathsal/" target="_blank" class="text-xl md:text-3xl text-[#1B1B19] hover:text-white transition-all duration-300">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/Pulditha" target="_blank" class="text-xl md:text-3xl text-[#1B1B19] hover:text-white transition-all duration-300">
+        <i class="fa-brands fa-github"></i>
+      </a>
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/94771852120" target="_blank" id="whatsapp-icon" class="text-xl md:text-3xl text-[#1B1B19] hover:text-white transition-all duration-300">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+
+      <!-- Phone -->
+      <button id="phone-button" class="text-xl md:text-3xl text-[#1B1B19] hover:text-white transition-all duration-300 relative">
+        <i class="fa-solid fa-phone"></i>
+      </button>
+
+      <!-- Phone Number (Initially Hidden) -->
+      <span id="phone-number" class="text-xl md:text-2xl text-[#1B1B19] ml-2 opacity-0 scale-0 origin-left">
+        0771852120
+      </span>
+
     </div>
+  </div>
+
+  <!-- Email Section (same flex container) -->
+  <div class="text-center md:text-left">
+    <p class="text-lg md:text-xl text-[#1B1B19] font-semibold">Prefer email? Sounds good.</p>
+    <p class="text-lg md:text-xl text-[#1B1B19] font-semibold">
+      I’m over at
+      <a href="mailto:puldithaw@gmail.com" class="text-white hover:underline">Puldithaw@gmail.com</a>.
+    </p>
+  </div>
+
+</div>
   </div>
 </section>
 

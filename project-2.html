@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pulditha Wathsal Portfolio</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="projects.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Pacifico&display=swap" rel="stylesheet">
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+          
+      </head>
+<body>
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+
+  <div class="text-[#C4BCB3] fixed-navbar fixed w-full px-6 py-2 flex items-center justify-between z-50">
+        <div class="text-2xl name"><a href="index.html">Pulditha wathsal</a></div>
+   <button id="hamburger" class="text-3xl">
+    <i class="fa-solid fa-bars"></i>
+    <i class="fa-solid fa-x hidden"></i>
+    <div class="hidden" id="debugger2"></div>
+  </button>
+  </div>
+
+<nav id="navMenu" style="background-color: #C4BCB3  ;" class="fixed top-0 left-0 w-full h-full transform -translate-y-full transition-transform duration-1000 z-40 flex flex-col items-center justify-center">
+  <ul class="flex flex-col items-center justify-center text-6xl sm:text-7xl md:text-[9rem]">
+    <li><a href="index.html" class="text-[#1B1B19]">Home</a></li>
+    <li><a href="index.html#about" class="text-[#1B1B19]">About</a></li>
+    <li><a href="index.html#projects" class="text-[#1B1B19]">Projects</a></li>
+    <li><a href="index.html#contact" class="text-[#1B1B19]">Contact</a></li>
+  </ul>
+</nav>
+
+
+
+
+<!-- New Project Details Section -->
+<section id="project-details" class="pt-40 pb-20 min-h-screen bg-neutral-850 text-[#C4BCB3]">
+    <div class="container mx-auto px-6">
+
+      <!-- Title + Visit Website Link -->
+  <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-10">
+    <h1 class="text-2xl md:text-4xl font-bold"><a href="index.html#projects"><i class="fa-solid fa-arrow-left"></i></a></h1>
+
+    <h1 class="text-4xl md:text-6xl font-bold" id="project-title">Budget Buddy</h1>
+    
+    <a href="https://budgetbuddy.ceygenic.co/" target="_blank" 
+       class="mt-4 md:mt-0 text-lg md:text-3xl text-[#C4BCB3] hover:underline hover:text-white transition">
+       <i class="fa-solid fa-up-right-from-square"></i>  Visit Website
+    </a>
+  </div>
+     
+
+      <!-- Main Image -->
+      <div class="flex justify-center mb-10">
+        <div class="overflow-hidden  w-full max-w-4xl ">
+          <img src="img/buddy1.png" alt="Main Project Image" class="object-cover w-full h-full" id="main-img">
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="description text-lg md:text-2xl leading-relaxed mb-16 " id="project-description">
+       Budget buddy is a Second hand marketplace for Buying and selling Preloved goods. Apart from that there are few unique feature which other marketplaces doesnt have like Community post , Repair services and much more. This masterpiece is created Using Agile Methodology with the use of Figma for UI UX , HTML,CSS,JS,PHP,Mysql for Programming. This includes both the Front end and the backend for admins.
+      </div>
+
+      <!-- Other Images -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 other-images" id="other-images">
+        <img src="img/buddy2.png" alt="Project Screenshot 1" class="rounded-lg shadow-md">
+        <img src="img/buddy7.png" alt="Project Screenshot 3" class="rounded-lg shadow-md">
+        <img src="img/buddy3.png" alt="Project Screenshot 2" class="rounded-lg shadow-md">
+        <img src="img/buddy4.png" alt="Project Screenshot 3" class="rounded-lg shadow-md">
+        <img src="img/buddy6.png" alt="Project Screenshot 3" class="rounded-lg shadow-md">
+       
+        <img src="img/buddy5.png" alt="Project Screenshot 4" class="rounded-lg shadow-md">
+      </div>
+
+    </div>
+
+    
+  </section>
+
+  <!-- Technologies Used Section -->
+<section id="technologies" class="py-20 bg-neutral-900 text-[#C4BCB3]">
+    <div class="container mx-auto px-6 text-center">
+  
+      <h2 class="text-3xl md:text-5xl font-bold mb-10">Technologies Used</h2>
+  
+      <div class="flex flex-wrap justify-center gap-6">
+        <div class="tech-tag flex items-center gap-3 bg-neutral-800 py-3 px-6 rounded-full shadow-md hover:bg-neutral-700 transition">
+          <img src="img/figma.png" alt="Figma" class="w-8 h-8">
+          <span class="text-lg font-medium">Figma</span>
+        </div>
+        <div class="tech-tag flex items-center gap-3 bg-neutral-800 py-3 px-6 rounded-full shadow-md hover:bg-neutral-700 transition">
+          <img src="img/php.png" alt="Php" class="w-8 h-8">
+          <span class="text-lg font-medium">Php</span>
+        </div>
+
+        <div class="tech-tag flex items-center gap-3 bg-neutral-800 py-3 px-6 rounded-full shadow-md hover:bg-neutral-700 transition">
+            <img src="img/html.png" alt="HTML" class="w-8 h-8">
+            <span class="text-lg font-medium">HTML</span>
+          </div>
+
+        <div class="tech-tag flex items-center gap-3 bg-neutral-800 py-3 px-6 rounded-full shadow-md hover:bg-neutral-700 transition">
+            <img src="img/css.png" alt="CSS" class="w-8 h-8">
+            <span class="text-lg font-medium">CSS</span>
+          </div>
+
+        <div class="tech-tag flex items-center gap-3 bg-neutral-800 py-3 px-6 rounded-full shadow-md hover:bg-neutral-700 transition">
+          <img src="img/javascript.png" alt="Javascript" class="w-8 h-8">
+          <span class="text-lg font-medium">Javascript</span>
+        </div>
+        <div class="tech-tag flex items-center gap-3 bg-neutral-800 py-3 px-6 rounded-full shadow-md hover:bg-neutral-700 transition">
+          <img src="img/mysql.png" alt="MySQL" class="w-8 h-8">
+          <span class="text-lg font-medium">MySQL</span>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <!-- GSAP and ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollSmoother.min.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="projects.js"></script>
+
+</body>
+</html>
